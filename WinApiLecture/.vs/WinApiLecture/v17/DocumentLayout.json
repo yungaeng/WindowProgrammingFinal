@@ -1,0 +1,607 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\define.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\define.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CCore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CTexture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CTexture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CTexture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CTexture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\Client.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\Client.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Start.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CScene_Start.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Start.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CScene_Start.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\func.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\func.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCamera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CCamera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Tool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CScene_Tool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRigidBody.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CRigidBody.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSceneMgr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CSceneMgr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCamera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CCamera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CGravity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CGravity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JongHyeon\\Sound\\CSound.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSoundMgr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CSoundMgr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSound.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CSound.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSound.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CSound.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CRes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CRes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCollisionMgr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CCollisionMgr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CBlock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CBlock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\func.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\func.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\global.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\global.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CTexture.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CTexture.h",
+              "RelativeDocumentMoniker": "Client\\CTexture.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CTexture.h",
+              "RelativeToolTip": "Client\\CTexture.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T06:35:31.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CTexture.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CTexture.cpp",
+              "RelativeDocumentMoniker": "Client\\CTexture.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CTexture.cpp",
+              "RelativeToolTip": "Client\\CTexture.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-05T06:35:30.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Client.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\Client.h",
+              "RelativeDocumentMoniker": "Client\\Client.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\Client.h",
+              "RelativeToolTip": "Client\\Client.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T06:34:41.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CScene_Start.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Start.h",
+              "RelativeDocumentMoniker": "Client\\CScene_Start.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Start.h",
+              "RelativeToolTip": "Client\\CScene_Start.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-01T12:00:49.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CObject.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CObject.cpp",
+              "RelativeDocumentMoniker": "Client\\CObject.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CObject.cpp",
+              "RelativeToolTip": "Client\\CObject.cpp",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAUwGgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T14:35:12.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CCore.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCore.h",
+              "RelativeDocumentMoniker": "Client\\CCore.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCore.h",
+              "RelativeToolTip": "Client\\CCore.h",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAWwGoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T06:23:29.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CCore.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCore.cpp",
+              "RelativeDocumentMoniker": "Client\\CCore.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCore.cpp",
+              "RelativeToolTip": "Client\\CCore.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T11:39:25.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CScene.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene.cpp",
+              "RelativeDocumentMoniker": "Client\\CScene.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene.cpp",
+              "RelativeToolTip": "Client\\CScene.cpp",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAgwKgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T14:44:36.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CUI.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CUI.cpp",
+              "RelativeDocumentMoniker": "Client\\CUI.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CUI.cpp",
+              "RelativeToolTip": "Client\\CUI.cpp",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T04:59:47.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CPlayer.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CPlayer.h",
+              "RelativeDocumentMoniker": "Client\\CPlayer.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CPlayer.h",
+              "RelativeToolTip": "Client\\CPlayer.h",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T10:58:39.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "define.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\define.h",
+              "RelativeDocumentMoniker": "Client\\define.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\define.h",
+              "RelativeToolTip": "Client\\define.h",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAA8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T14:45:10.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CScene.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene.h",
+              "RelativeDocumentMoniker": "Client\\CScene.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene.h",
+              "RelativeToolTip": "Client\\CScene.h",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T14:44:13.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CSound.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSound.cpp",
+              "RelativeDocumentMoniker": "Client\\CSound.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSound.cpp",
+              "RelativeToolTip": "Client\\CSound.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T11:58:13.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "func.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\func.h",
+              "RelativeDocumentMoniker": "Client\\func.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\func.h",
+              "RelativeToolTip": "Client\\func.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAmwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T15:08:48.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CScene_Start.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Start.cpp",
+              "RelativeDocumentMoniker": "Client\\CScene_Start.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Start.cpp",
+              "RelativeToolTip": "Client\\CScene_Start.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T04:33:53.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CObject.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CObject.h",
+              "RelativeDocumentMoniker": "Client\\CObject.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CObject.h",
+              "RelativeToolTip": "Client\\CObject.h",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T08:18:09.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CSoundMgr.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSoundMgr.h",
+              "RelativeDocumentMoniker": "Client\\CSoundMgr.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSoundMgr.h",
+              "RelativeToolTip": "Client\\CSoundMgr.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-01T12:01:33.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CCamera.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCamera.cpp",
+              "RelativeDocumentMoniker": "Client\\CCamera.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCamera.cpp",
+              "RelativeToolTip": "Client\\CCamera.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T12:55:29.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CPlayer.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CPlayer.cpp",
+              "RelativeDocumentMoniker": "Client\\CPlayer.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CPlayer.cpp",
+              "RelativeToolTip": "Client\\CPlayer.cpp",
+              "ViewState": "AQIAAPwAAAAAAAAAAAAAAA4BAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T14:31:04.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CScene_Tool.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Tool.cpp",
+              "RelativeDocumentMoniker": "Client\\CScene_Tool.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CScene_Tool.cpp",
+              "RelativeToolTip": "Client\\CScene_Tool.cpp",
+              "ViewState": "AQIAAO0AAAAAAAAAAAAgwPgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T05:07:44.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CUI.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CUI.h",
+              "RelativeDocumentMoniker": "Client\\CUI.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CUI.h",
+              "RelativeToolTip": "Client\\CUI.h",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T04:59:52.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CSound.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSound.h",
+              "RelativeDocumentMoniker": "Client\\CSound.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSound.h",
+              "RelativeToolTip": "Client\\CSound.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-01T11:57:57.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CRes.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRes.h",
+              "RelativeDocumentMoniker": "Client\\CRes.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRes.h",
+              "RelativeToolTip": "Client\\CRes.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-01T11:54:17.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CRes.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRes.cpp",
+              "RelativeDocumentMoniker": "Client\\CRes.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRes.cpp",
+              "RelativeToolTip": "Client\\CRes.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T11:54:16.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CSound.cpp",
+              "DocumentMoniker": "C:\\Users\\JongHyeon\\Sound\\CSound.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\JongHyeon\\Sound\\CSound.cpp",
+              "ToolTip": "C:\\Users\\JongHyeon\\Sound\\CSound.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\JongHyeon\\Sound\\CSound.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-01T11:43:02.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "global.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\global.h",
+              "RelativeDocumentMoniker": "Client\\global.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\global.h",
+              "RelativeToolTip": "Client\\global.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T15:09:20.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\pch.h",
+              "RelativeDocumentMoniker": "Client\\pch.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\pch.h",
+              "RelativeToolTip": "Client\\pch.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T15:09:18.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "func.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\func.cpp",
+              "RelativeDocumentMoniker": "Client\\func.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\func.cpp",
+              "RelativeToolTip": "Client\\func.cpp",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAWwGAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T15:03:31.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\main.cpp",
+              "RelativeDocumentMoniker": "Client\\main.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\main.cpp",
+              "RelativeToolTip": "Client\\main.cpp",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAAwBkBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T14:53:36.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CBlock.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CBlock.cpp",
+              "RelativeDocumentMoniker": "Client\\CBlock.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CBlock.cpp",
+              "RelativeToolTip": "Client\\CBlock.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T14:41:49.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CBlock.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CBlock.h",
+              "RelativeDocumentMoniker": "Client\\CBlock.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CBlock.h",
+              "RelativeToolTip": "Client\\CBlock.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-28T14:41:45.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CSceneMgr.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSceneMgr.cpp",
+              "RelativeDocumentMoniker": "Client\\CSceneMgr.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CSceneMgr.cpp",
+              "RelativeToolTip": "Client\\CSceneMgr.cpp",
+              "ViewState": "AQIAADMAAAAAAAAAAAAUwDYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-28T14:35:19.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CCollisionMgr.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCollisionMgr.cpp",
+              "RelativeDocumentMoniker": "Client\\CCollisionMgr.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCollisionMgr.cpp",
+              "RelativeToolTip": "Client\\CCollisionMgr.cpp",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T12:18:49.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CGravity.cpp",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CGravity.cpp",
+              "RelativeDocumentMoniker": "Client\\CGravity.cpp",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CGravity.cpp",
+              "RelativeToolTip": "Client\\CGravity.cpp",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T05:57:35.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CCamera.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCamera.h",
+              "RelativeDocumentMoniker": "Client\\CCamera.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CCamera.h",
+              "RelativeToolTip": "Client\\CCamera.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-27T03:48:23.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CRigidBody.h",
+              "DocumentMoniker": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRigidBody.h",
+              "RelativeDocumentMoniker": "Client\\CRigidBody.h",
+              "ToolTip": "C:\\Users\\yun\\Desktop\\Window Final Project\\WinApiLecture_include_sound\\WinApiLecture\\Client\\CRigidBody.h",
+              "RelativeToolTip": "Client\\CRigidBody.h",
+              "ViewState": "AQIAABQAAAAAAAAAAAAUwBoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T10:34:13.888Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
