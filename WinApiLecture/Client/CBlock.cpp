@@ -22,10 +22,37 @@ CBlock::CBlock()
 	GetCollider()->SetOffsetPos(Vec2(0.f, 0.f));
 	GetCollider()->SetScale(Vec2(40.f, 40.f));
 
+	CreateAnimator();
+	// 캐릭터의 상태를 먼저 설정한 후 , 그 상태에 맞게 캐릭터의 애니메이션을 정하자.
+	// 맞은 상태, 움직이는 상태, 점프 상태, 등등 그 상태의 전환을 완벽히 실행한 뒤
+	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"CoinTex", L"texture\\coin.bmp");
+
+	GetAnimator()->CreateAnimation(
+		L"IDEL_1",
+		pTex,
+		Vec2(0.f, 0.f),
+		Vec2(3200.f, 3200.f),
+		Vec2(3200.f, 0.f),
+		0.2f,
+		3);
+	GetAnimator()->CreateAnimation(
+	L"IDEL_2",
+		pTex,
+		Vec2(0.f, 3200.f),
+		Vec2(3200.f, 3200.f),
+		Vec2(3200.f, 0.f),
+		0.2f,
+		3);
 }
 
 CBlock::~CBlock()
 {
+}
+
+void CBlock::update_animation()
+{
+	GetAnimator()->Play(L"IDEL_1", true);
+	GetAnimator()->Play(L"IDEL_2", true);
 }
 
 

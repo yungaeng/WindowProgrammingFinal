@@ -267,7 +267,7 @@ void CPlayer::update_move()
 	CRigidBody* pRigid = GetRigidBody();
 
 	//계속 움직이게
-	pRigid->AddForce(Vec2(800.f, 0.f));
+	pRigid->AddForce(Vec2(100.f, 0.f));
 	pRigid->SetVelocity(Vec2(200.f, pRigid->GetVelocity().y));
 
 	//if (KEY_HOLD(KEY::W))
@@ -371,6 +371,11 @@ void CPlayer::OnCollisionEnter(CCollider* _pOther)
 			m_iJumpStack = 2;
 			m_eCurState = PLAYER_STATE::IDLE;
 		}
+	}
+
+	if (L"Coin" == pOtherObj->GetName())
+	{
+		DeleteObject(_pOther->GetObj());
 	}
 }
 

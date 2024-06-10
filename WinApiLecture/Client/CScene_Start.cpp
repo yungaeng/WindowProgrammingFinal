@@ -88,6 +88,24 @@ void CScene_Start::update()
 			}
 		}
 	}
+
+	//카
+
+	// 카메라 중심점 좌표
+	float Acctime= 0.f;
+	Acctime += fDT;
+	
+	if(Acctime >=1.f)
+	{
+		CObject* pBlock = new CBlock;
+		pBlock->SetName(L"Coin");
+		pBlock->SetPos(Vec2(CCamera::GetInst()->GetLookAt().x + 100.f, 500.f));
+		pBlock->SetScale(Vec2(60.f, 60.f));
+		CreateObject(pBlock, GROUP_TYPE::BLOCK);
+		Acctime = 0.f;
+	}
+
+
 }
 
 void CScene_Start::render(HDC _dc)
@@ -184,11 +202,11 @@ void CScene_Start::Enter()
 	CObject* pGround = new CGround;
 	pGround->SetName(L"Ground");
 	pGround->SetPos(Vec2(0.f, 584.f));
-	pGround->SetScale(Vec2(600000.f, 60.f));
+	pGround->SetScale(Vec2(60000.f, 60.f));
 	AddObject(pGround, GROUP_TYPE::GROUND);
 
 	//가로등 추가
-	for (int i = 0; i < 400; ++i)
+	for (int i = 0; i < 60; ++i)
 	{
 		CObject* pBlock = new CBlock;
 		pBlock->SetName(L"Block");
@@ -197,11 +215,21 @@ void CScene_Start::Enter()
 		AddObject(pBlock, GROUP_TYPE::BLOCK);
 	}
 
+	for (int i = 0; i < 600; ++i)
+	{
+		CObject* pBlock = new CBlock;
+		pBlock->SetName(L"Coin");
+		pBlock->SetPos(Vec2(0.f + 100.f * i, 400.f));
+		pBlock->SetScale(Vec2(40.f, 40.f));
+		AddObject(pBlock, GROUP_TYPE::BLOCK);
+	}
+
 	// 충돌 지정
 	// Player 그룹과 Monster 그룹 간의 충돌 지정
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::MONSTER);
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::GROUND);
+	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::BLOCK);
 	//CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 
 	// 카메라 LookAt 지정
