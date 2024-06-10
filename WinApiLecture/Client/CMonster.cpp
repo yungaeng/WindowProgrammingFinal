@@ -5,6 +5,9 @@
 #include "CKeyMgr.h"
 #include "CCollider.h"
 #include "AI.h"
+#include "CTexture.h"
+#include "CResMgr.h"
+#include "CAnimator.h"
 CMonster::CMonster()
 	:m_vCenterPos(Vec2(0.f,0.f))
 	,m_tInfo{}
@@ -14,8 +17,21 @@ CMonster::CMonster()
 	,m_iDir(1)
 	,m_iHP(5)*/
 {
+	// 06/11 적 텍스쳐 추가
 	CreateCollider();
 	GetCollider()->SetScale(Vec2(40.f, 40.f));
+
+	CreateAnimator();
+	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"MonsterTex", L"texture\\pepper.bmp");
+
+	GetAnimator()->CreateAnimation(
+		L"Monster",
+		pTex,
+		Vec2(0.f, 0.f),
+		Vec2(272.f, 272.f),
+		Vec2(272.f, 0.f),
+		0.5f,
+		4);
 }
 
 CMonster::~CMonster()
@@ -47,6 +63,9 @@ void CMonster::update()
 	//}
 
 	//SetPos(vCurPos);
+
+	// 06/11 적 애니메이션
+	GetAnimator()->Play(L"Monster", true);
 }
 
 

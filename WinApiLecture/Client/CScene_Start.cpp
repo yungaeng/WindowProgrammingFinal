@@ -205,7 +205,7 @@ void CScene_Start::Enter()
 	pGround->SetScale(Vec2(60000.f, 60.f));
 	AddObject(pGround, GROUP_TYPE::GROUND);
 
-	//가로등 추가
+	// 가로등 추가
 	for (int i = 0; i < 60; ++i)
 	{
 		CObject* pBlock = new CBlock;
@@ -215,6 +215,7 @@ void CScene_Start::Enter()
 		AddObject(pBlock, GROUP_TYPE::BLOCK);
 	}
 
+	// 코인 추가
 	for (int i = 0; i < 600; ++i)
 	{
 		CObject* pBlock = new CBlock;
@@ -222,6 +223,16 @@ void CScene_Start::Enter()
 		pBlock->SetPos(Vec2(0.f + 100.f * i, 400.f));
 		pBlock->SetScale(Vec2(40.f, 40.f));
 		AddObject(pBlock, GROUP_TYPE::BLOCK);
+	}
+
+	// 적 추가
+	for (int i = 0; i < 60; ++i)
+	{
+		CObject* pMonster = new CMonster;
+		pMonster->SetName(L"Monster");
+		pMonster->SetPos(Vec2(0.f + 1000.f * i, 480.f));
+		pMonster->SetScale(Vec2(40.f, 40.f));
+		AddObject(pMonster, GROUP_TYPE::MONSTER);
 	}
 
 	// 충돌 지정
