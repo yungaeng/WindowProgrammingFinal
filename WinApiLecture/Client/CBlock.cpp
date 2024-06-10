@@ -23,18 +23,23 @@ CBlock::CBlock()
 	GetCollider()->SetScale(Vec2(40.f, 40.f));
 
 	CreateAnimator();
-	// Ä³¸¯ÅÍÀÇ »óÅÂ¸¦ ¸ÕÀú ¼³Á¤ÇÑ ÈÄ , ±× »óÅÂ¿¡ ¸Â°Ô Ä³¸¯ÅÍÀÇ ¾Ö´Ï¸ÞÀÌ¼ÇÀ» Á¤ÇÏÀÚ.
-	// ¸ÂÀº »óÅÂ, ¿òÁ÷ÀÌ´Â »óÅÂ, Á¡ÇÁ »óÅÂ, µîµî ±× »óÅÂÀÇ ÀüÈ¯À» ¿Ïº®È÷ ½ÇÇàÇÑ µÚ
-	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"CoinTex", L"texture\\coin.bmp");
+	// ìºë¦­í„°ì˜ ìƒíƒœë¥¼ ë¨¼ì € ì„¤ì •í•œ í›„ , ê·¸ ìƒíƒœì— ë§žê²Œ ìºë¦­í„°ì˜ ì• ë‹ˆë©”ì´ì…˜ì„ ì •í•˜ìž.
+	// ë§žì€ ìƒíƒœ, ì›€ì§ì´ëŠ” ìƒíƒœ, ì í”„ ìƒíƒœ, ë“±ë“± ê·¸ ìƒíƒœì˜ ì „í™˜ì„ ì™„ë²½ížˆ ì‹¤í–‰í•œ ë’¤
 
+	// 06.10 - Coin2 ì´ë¯¸ì§€ ì œìž‘, ê·¸ ì´ë¯¸ì§€ë¥¼ í…ìŠ¤ì²˜ë¡œ ì‚¬ìš©
+	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"CoinTex", L"texture\\coin2.bmp");
+
+
+	// 06.10 - ì½”ì¸ ì´ë¯¸ì§€ ì• ë‹ˆë©”ì´ì…˜ ìƒì„±
 	GetAnimator()->CreateAnimation(
 		L"IDEL_1",
 		pTex,
 		Vec2(0.f, 0.f),
-		Vec2(3200.f, 3200.f),
-		Vec2(3200.f, 0.f),
+		Vec2(101.f, 115.f),
+		Vec2(103.5f, 0.f),
 		0.2f,
-		3);
+		6);
+
 	GetAnimator()->CreateAnimation(
 	L"IDEL_2",
 		pTex,
@@ -42,7 +47,7 @@ CBlock::CBlock()
 		Vec2(3200.f, 3200.f),
 		Vec2(3200.f, 0.f),
 		0.2f,
-		3);
+		2);
 }
 
 CBlock::~CBlock()
@@ -51,14 +56,23 @@ CBlock::~CBlock()
 
 void CBlock::update()
 {
+	// 06.10 ìž¬ìƒí•  ì• ë‹ˆë©”ì´ì…˜ ì„ íƒ
+	GetAnimator()->Play(L"IDEL_1", true);
+
 }
 
 void CBlock::render(HDC _dc)
 {
-	Vec2 vPos = GetPos();
-	vPos = CCamera::GetInst()->GetRenderPos(vPos);
+	/*Vec2 vPos = GetPos();
+	vPos = CCamera::GetInst()->GetRenderPos(vPos);*/
 
-	CObject::render(_dc);
+	// 06.10 ì½”ì¸ì¸ ê²½ìš° ì• ë‹ˆë©”ì´ì…˜ ë Œë”í•˜ë„ë¡ ì„ íƒ
+	if (L"Coin" != GetName())
+		CObject::render(_dc);
+
+	else
+		Component_render(_dc);
+	
 }
 
 void CBlock::OnCollisionEnter(CCollider* _pOther)
@@ -67,7 +81,7 @@ void CBlock::OnCollisionEnter(CCollider* _pOther)
 
 void CBlock::OnCollision(CCollider* _pOther)
 {
-	CObject* pOtherObj = _pOther->GetObj();	// ºÎµúÈù »ó´ëÀÇ object¸¦ ¹Þ¾Æ¿È
+	CObject* pOtherObj = _pOther->GetObj();	// ë¶€ë”ªížŒ ìƒëŒ€ì˜ objectë¥¼ ë°›ì•„ì˜´
 	if (pOtherObj->GetName() == L"Missale_Player")
 	{
 		DeleteObject(this);
