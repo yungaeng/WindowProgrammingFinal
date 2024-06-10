@@ -18,7 +18,5 @@ public:
 public:
     CBlock();
     ~CBlock();
-    // 첩데이트 애니메이션 추가
-    void update_animation();
 };
 

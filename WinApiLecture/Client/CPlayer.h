@@ -12,9 +12,21 @@ enum class PLAYER_STATE
 
 };
 
+enum class PLAYER_JUMP_STATE
+{
+    JUMP_UP = 10,
+    JUMP_AIR,
+    JUMP_DOWN,
+
+    DOUBLE_JUMP_UP,
+    DOUBLE_JUMP_AIR,
+    DOUBLE_JUMP_DOWN,
+};
+
+
 enum class PLAYER_ATTACK_STATE
 {
-    NOMAL_ATT_1,
+    NOMAL_ATT_1 = 20,
     NOMAL_ATT_2,
     NOMAL_ATT_3,
 
@@ -35,8 +47,8 @@ private:
 
     PLAYER_STATE    m_eCurState;
     PLAYER_STATE    m_ePrevState;
-    int             m_iDir;         // 현재 방향
-    int             m_iPrevDir;     // 이전 방향
+    PLAYER_JUMP_STATE       m_eCurJumpState;
+    PLAYER_JUMP_STATE       m_ePrevJumpState;
     int             m_iJumpStack;   // 점프 가능 횟수
 
     public:

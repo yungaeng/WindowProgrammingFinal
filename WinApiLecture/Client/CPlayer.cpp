@@ -17,12 +17,12 @@
 
 
 CPlayer::CPlayer()
-	//:m_pTex(nullptr)
+//:m_pTex(nullptr)
 	:m_eCurState(PLAYER_STATE::IDLE)
-	,m_ePrevState(PLAYER_STATE::WALK)
-	,m_iDir(1)
-	,m_iPrevDir(1)
-	,m_iJumpStack(2)
+	, m_ePrevState(PLAYER_STATE::WALK)
+	, m_eCurJumpState(PLAYER_JUMP_STATE::JUMP_UP)
+	, m_ePrevJumpState(PLAYER_JUMP_STATE::JUMP_DOWN)
+	, m_iJumpStack(2)
 {
 	// 강체 추가
 	CreateRigidBody();
@@ -31,35 +31,36 @@ CPlayer::CPlayer()
 	//// Texture 로딩하기
 	//m_pTex = CResMgr::GetInst()->LoadTexture(L"PlayerTex", L"texture\\airp.bmp");
 	CreateCollider();
+
+	// 충돌체 offset과 충돌체 크기 변경
 	// 충돌체의 offset을 수정하여 파이널 pos 적용시 그만큼 이동시켜 적용시킴
-	GetCollider()->SetOffsetPos(Vec2(-2.f, 12.f));
-
+	GetCollider()->SetOffsetPos(Vec2(10.f, 0.f));
 	// 충돌체의 크기 설정
-	GetCollider()->SetScale(Vec2(25.f, 40.f));
-
+	GetCollider()->SetScale(Vec2(110.f, 130.f));
 
 
 	// 애니메이터 컴포넌트 생성
 	CreateAnimator();
 	// 캐릭터의 상태를 먼저 설정한 후 , 그 상태에 맞게 캐릭터의 애니메이션을 정하자.
 	// 맞은 상태, 움직이는 상태, 점프 상태, 등등 그 상태의 전환을 완벽히 실행한 뒤
-	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"PlayerTex", L"texture\\link.bmp");
-	
+	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"PlayerTex", L"texture\\Brave_Cookie.bmp");
 
-	GetAnimator()->LoadAnimation(L"animation\\player_walk_left.anim");
-	GetAnimator()->LoadAnimation(L"animation\\player_walk_right.anim");
-	GetAnimator()->LoadAnimation(L"animation\\player_idle_top.anim");
-	GetAnimator()->LoadAnimation(L"animation\\player_idle_bottom.anim");
-	GetAnimator()->LoadAnimation(L"animation\\player_jump_left.anim");
-	GetAnimator()->LoadAnimation(L"animation\\player_jump_right.anim");
+
+	//GetAnimator()->LoadAnimation(L"animation\\player_walk_left.anim");
+	// walk error - 비활성화 06/10
+	//GetAnimator()->LoadAnimation(L"animation\\player_walk_right.anim");
+	//GetAnimator()->LoadAnimation(L"animation\\player_idle_top.anim");
+	//GetAnimator()->LoadAnimation(L"animation\\player_idle_bottom.anim");
+	//GetAnimator()->LoadAnimation(L"animation\\player_jump_left.anim");
+	//GetAnimator()->LoadAnimation(L"animation\\player_jump_right.anim");*/
 	//GetAnimator()->CreateAnimation(
 	//	L"IDLE_BOTTOM",
 	//	pTex,
-	//	Vec2(0.f, 0.f),
-	//	Vec2(60.f, 65.f),
-	//	Vec2(60.f, 0.f),
+	//	Vec2(5.f, 550.f),
+	//	Vec2(265.f, 265.f),
+	//	Vec2(0.f, 270.f),
 	//	0.5f,
-	//	3);
+	//	2);
 	//GetAnimator()->CreateAnimation(
 	//	L"IDLE_TOP",
 	//	pTex,
@@ -68,46 +69,87 @@ CPlayer::CPlayer()
 	//	Vec2(60.f, 0.f),
 	//	1.f,
 	//	1);
-	//GetAnimator()->CreateAnimation(
-	//	L"WALK_LEFT",
-	//	pTex,
-	//	Vec2(0.f, 325.f), 
-	//	Vec2(60.f, 65.f), 
-	//	Vec2(60.f, 0.f),
-	//	0.1f,
-	//	10);
-	//GetAnimator()->CreateAnimation(
-	//	L"WALK_RIGHT",
-	//	pTex,
-	//	Vec2(0.f, 455.f),
-	//	Vec2(60.f, 65.f),
-	//	Vec2(60.f, 0.f),
-	//	0.1f,
-	//	10);
-	//GetAnimator()->CreateAnimation(
-	//	L"JUMP_LEFT",
-	//	pTex,
-	//	Vec2(0.f, 65.f),
-	//	Vec2(60.f, 65.f),
-	//	Vec2(60.f, 0.f),
-	//	0.2f,
-	//	1);
+	/*GetAnimator()->CreateAnimation(
+		L"WALK_LEFT",
+		pTex,
+		Vec2(0.f, 325.f),
+		Vec2(60.f, 65.f),
+		Vec2(60.f, 0.f),
+		0.1f,
+		10);*/
 
-	//GetAnimator()->CreateAnimation(
-	//	L"JUMP_RIGHT",
-	//	pTex,
-	//	Vec2(0.f, 195.f),
-	//	Vec2(60.f, 65.f),
-	//	Vec2(60.f, 0.f),
-	//	0.2f,
-	//	1);
-	//// Animation 저장해보기
-	//GetAnimator()->FindAnimation(L"IDLE_TOP")->Save(L"animation\\player_idle_top.anim");
+		// 셀 당 크기 272 x 272
+		// walk state error 06/10
+	GetAnimator()->CreateAnimation(
+		L"WALK_RIGHT",
+		pTex,
+		Vec2(5.f, 410.f),
+		Vec2(267.f, 133.f),
+		Vec2(272.f, 0.f),
+		0.1f,
+		4);
+	/*GetAnimator()->CreateAnimation(
+		L"JUMP_LEFT",
+		pTex,
+		Vec2(0.f, 65.f),
+		Vec2(60.f, 65.f),
+		Vec2(60.f, 0.f),
+		0.2f,
+		1);*/
+	GetAnimator()->CreateAnimation(
+		L"JUMP_UP",
+		pTex,
+		Vec2(5.f, 1365.f),
+		Vec2(267.f, 265.f),
+		Vec2(272.f, 0.f),
+		0.1f,
+		1);
+	GetAnimator()->CreateAnimation(
+		L"JUMP_AIR",
+		pTex,
+		Vec2(277.f, 1365.f),
+		Vec2(267.f, 160.f),
+		Vec2(272.f, 0.f),
+		0.2f,
+		2);
+
+	GetAnimator()->CreateAnimation(
+		L"JUMP_DOWN",
+		pTex,
+		Vec2(820.f, 1475.f),
+		Vec2(267.f, 150.f),
+		Vec2(272.f, 0.f),
+		0.1f,
+		2);
+	GetAnimator()->CreateAnimation(
+		L"DOUBLE_JUMP_UP",
+		pTex,
+		Vec2(277.f, 130.f),
+		Vec2(267.f, 140.f),
+		Vec2(272.f, 0.f),
+		0.1f,
+		3);
+	GetAnimator()->CreateAnimation(
+		L"DOUBLE_JUMP_AIR",
+		pTex,
+		Vec2(1090.f, 140.f),
+		Vec2(267.f, 130.f),
+		Vec2(272.f, 0.f),
+		0.1f,
+		1);
+	// Animation 저장해보기
+//	GetAnimator()->FindAnimation(L"IDLE_TOP")->Save(L"animation\\player_idle_top.anim");
 	//GetAnimator()->FindAnimation(L"IDLE_BOTTOM")->Save(L"animation\\player_idle_bottom.anim");
-	//GetAnimator()->FindAnimation(L"WALK_LEFT")->Save(L"animation\\player_walk_left.anim");
-	//GetAnimator()->FindAnimation(L"WALK_RIGHT")->Save(L"animation\\player_walk_right.anim");
+//	GetAnimator()->FindAnimation(L"WALK_LEFT")->Save(L"animation\\player_walk_left.anim");
+//	GetAnimator()->FindAnimation(L"WALK_RIGHT")->Save(L"animation\\player_walk_right.anim");
 	//GetAnimator()->FindAnimation(L"JUMP_LEFT")->Save(L"animation\\player_jump_left.anim");
-	//GetAnimator()->FindAnimation(L"JUMP_RIGHT")->Save(L"animation\\player_jump_right.anim");
+	GetAnimator()->FindAnimation(L"JUMP_UP")->Save(L"animation\\player_jump.anim");
+	GetAnimator()->FindAnimation(L"JUMP_DOWN")->Save(L"animation\\player_jump_down.anim");
+	GetAnimator()->FindAnimation(L"JUMP_AIR")->Save(L"animation\\player_jump_air.anim");
+	GetAnimator()->FindAnimation(L"DOUBLE_JUMP_UP")->Save(L"animation\\player_double_jump_up.anim");
+	GetAnimator()->FindAnimation(L"DOUBLE_JUMP_AIR")->Save(L"animation\\player_double_jump_air.anim");
+
+
 	// 중력 컴포넌트 생성
 	CreateGravity();
 	//GetAnimator()->Play(L"IDLE_BOTTOM", true);
@@ -155,7 +197,7 @@ void CPlayer::update()
 
 
 	m_ePrevState = m_eCurState;
-	m_iPrevDir = m_iDir;
+	m_ePrevJumpState = m_eCurJumpState;
 }
 
 void CPlayer::render(HDC _dc)
@@ -227,35 +269,56 @@ void CPlayer::CreateMissile()
 
 void CPlayer::update_state()
 {
-	// 복잡하게 상태를 변경 시키기			else if로 구현하면 상쇄를 구현할 수 없음
-	if (KEY_HOLD(KEY::A))
-	{
-		m_iDir = -1;
-		if(PLAYER_STATE::JUMP != m_eCurState)
-			m_eCurState = PLAYER_STATE::WALK;
-	}
+	//// 복잡하게 상태를 변경 시키기			else if로 구현하면 상쇄를 구현할 수 없음
+	//if (KEY_HOLD(KEY::A))
+	//{
+	if (PLAYER_STATE::JUMP != m_eCurState)
+		m_eCurState = PLAYER_STATE::WALK;
+	/*}
 	if (KEY_HOLD(KEY::D))
 	{
-		m_iDir = 1;
 		if (PLAYER_STATE::JUMP != m_eCurState)
 			m_eCurState = PLAYER_STATE::WALK;
-	}
-	if(GetRigidBody())
+	}*/
+	/*if(GetRigidBody())
 	{
 		if (0.f == GetRigidBody()->GetSpeed() && PLAYER_STATE::JUMP != m_eCurState)
 		{
 			m_eCurState = PLAYER_STATE::IDLE;
 		}
-	}
-	
+	}*/
 	if (KEY_TAP(KEY::SPACE))
 	{
 		m_eCurState = PLAYER_STATE::JUMP;
-		if(m_iJumpStack > 0)
-		if (GetRigidBody())
+		if (m_iJumpStack > 0)
+			if (GetRigidBody())
+			{
+				--m_iJumpStack;
+				GetRigidBody()->SetVelocity(Vec2(GetRigidBody()->GetVelocity().x, -500.f));
+			}
+	}
+	// JUMP 상태인 경우 속도에 따라 분류하기
+	if (m_eCurState == PLAYER_STATE::JUMP)
+	{
+		if (m_iJumpStack == 1)
 		{
-			--m_iJumpStack;
-			GetRigidBody()->SetVelocity(Vec2(GetRigidBody()->GetVelocity().x, -400.f));
+			if (GetRigidBody()->GetVelocity().y < -50.f)
+				m_eCurJumpState = PLAYER_JUMP_STATE::JUMP_UP;
+			else if (GetRigidBody()->GetVelocity().y >= -50.f
+				&& GetRigidBody()->GetVelocity().y <= 300)
+				m_eCurJumpState = PLAYER_JUMP_STATE::JUMP_AIR;
+			else
+				m_eCurJumpState = PLAYER_JUMP_STATE::JUMP_DOWN;
+		}
+		else if (m_iJumpStack == 0)
+		{
+			if (GetRigidBody()->GetVelocity().y < -50.f)
+				m_eCurJumpState = PLAYER_JUMP_STATE::DOUBLE_JUMP_UP;
+			else if (GetRigidBody()->GetVelocity().y >= -50.f
+				&& GetRigidBody()->GetVelocity().y <= 300)
+				m_eCurJumpState = PLAYER_JUMP_STATE::JUMP_AIR;
+			else
+				m_eCurJumpState = PLAYER_JUMP_STATE::JUMP_DOWN;
 		}
 	}
 }
@@ -310,7 +373,7 @@ void CPlayer::update_animation()
 	GetAnimator()->Play(L"WALK_RIGHT", true);
 
 	// 상태가 변경되지 않았다면 리턴
-	if (m_ePrevState == m_eCurState && m_iPrevDir == m_iDir)
+	if (m_ePrevState == m_eCurState && m_eCurJumpState == m_ePrevJumpState)
 	{
 		return;
 	}
@@ -326,10 +389,7 @@ void CPlayer::update_animation()
 	break;
 	case PLAYER_STATE::WALK:
 	{
-		if (m_iDir == 1)
-			GetAnimator()->Play(L"WALK_RIGHT", true);
-		else
-			GetAnimator()->Play(L"WALK_LEFT", true);
+		GetAnimator()->Play(L"WALK_RIGHT", true);
 	}
 	break;
 	case PLAYER_STATE::ATTACK:
@@ -343,11 +403,45 @@ void CPlayer::update_animation()
 		break;
 	case PLAYER_STATE::JUMP:
 	{
-		if (m_iDir == 1)
-			GetAnimator()->Play(L"JUMP_RIGHT", true);
-		else
+		// 일반 점프인 경우
+		if (m_iJumpStack == 1)
+		{
+			switch (m_eCurJumpState)
+			{
+			case PLAYER_JUMP_STATE::JUMP_UP:
+				GetAnimator()->Play(L"JUMP_UP", true);
+				break;
+			case PLAYER_JUMP_STATE::JUMP_AIR:
+				GetAnimator()->Play(L"JUMP_AIR", true);
+				break;
+			case PLAYER_JUMP_STATE::JUMP_DOWN:
+				GetAnimator()->Play(L"JUMP_DOWN", true);
+				break;
+			default:
+				break;
+			}
+		}
+		// 더블 점프의 경우
+		if (m_iJumpStack == 0)
+		{
+			switch (m_eCurJumpState)
+			{
+			case PLAYER_JUMP_STATE::DOUBLE_JUMP_UP:
+				GetAnimator()->Play(L"DOUBLE_JUMP_UP", true);
+				break;
+			case PLAYER_JUMP_STATE::JUMP_AIR:
+				GetAnimator()->Play(L"DOUBLE_JUMP_AIR", true);
+				break;
+			case PLAYER_JUMP_STATE::JUMP_DOWN:
+				GetAnimator()->Play(L"JUMP_DOWN", true);
+				break;
+			default:
+				break;
+			}
+		}
+		/*else
 			GetAnimator()->Play(L"JUMP_LEFT", true);
-
+			*/
 	}
 	break;
 	}

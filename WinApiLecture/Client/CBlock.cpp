@@ -49,13 +49,6 @@ CBlock::~CBlock()
 {
 }
 
-void CBlock::update_animation()
-{
-	GetAnimator()->Play(L"IDEL_1", true);
-	GetAnimator()->Play(L"IDEL_2", true);
-}
-
-
 void CBlock::update()
 {
 }
