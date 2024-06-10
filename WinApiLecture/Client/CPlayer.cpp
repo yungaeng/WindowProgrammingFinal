@@ -369,9 +369,6 @@ void CPlayer::update_move()
 
 void CPlayer::update_animation()
 {
-	//계속 걷는상태유지
-	GetAnimator()->Play(L"WALK_RIGHT", true);
-
 	// 상태가 변경되지 않았다면 리턴
 	if (m_ePrevState == m_eCurState && m_eCurJumpState == m_ePrevJumpState)
 	{
