@@ -330,8 +330,8 @@ void CPlayer::update_move()
 	CRigidBody* pRigid = GetRigidBody();
 
 	//계속 움직이게
-	pRigid->AddForce(Vec2(100.f, 0.f));
-	pRigid->SetVelocity(Vec2(200.f, pRigid->GetVelocity().y));
+	pRigid->AddForce(Vec2(300.f, 0.f));
+	pRigid->SetVelocity(Vec2(300.f, pRigid->GetVelocity().y));
 
 	//if (KEY_HOLD(KEY::W))
 	//{

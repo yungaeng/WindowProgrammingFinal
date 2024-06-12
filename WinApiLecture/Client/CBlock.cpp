@@ -56,9 +56,14 @@ CBlock::~CBlock()
 {
 }
 
+// 06/13 코인넘을 반환하는 함수 추가
+int CBlock::HowManyCoin()
+{
+	return CoinNum;
+}
+
 void CBlock::update()
 {
-	// ==06.10 수정== 코인이 돌아가는 상태의 애니메이션 선택
 	GetAnimator()->Play(L"IDEL_1", true);
 
 }
@@ -80,32 +85,19 @@ void CBlock::render(HDC _dc)
 
 void CBlock::OnCollisionEnter(CCollider* _pOther)
 {
-	CObject* pOtherObj = _pOther->GetObj();
-	if (pOtherObj->GetName() == L"Player")
-	{
-		pOtherObj->GetGravity()->SetGround(true);
-
-		Vec2 vObjPos = _pOther->GetFinalPos();
-		Vec2 vObjScale = _pOther->GetScale();
-
-		Vec2 vPos = GetCollider()->GetFinalPos();
-		Vec2 vScale = GetCollider()->GetScale();
-
-		// 두 세로 반경의 절반 간의 합 - 두 중심점과의 차이 = 파고든 거리
-		float fLen = abs(vObjPos.y - vPos.y);
-		float fValue = (vObjScale.y / 2.f + vScale.y / 2.f) - fLen;
-
-		// 파고든 거리만큼 올려줌
-		vObjPos = pOtherObj->GetPos();
-		vObjPos.y -= (fValue);
-		pOtherObj->SetPos(vObjPos);
-	}
+	
 }
 
 void CBlock::OnCollision(CCollider* _pOther)
 {
 	CObject* pOtherObj = _pOther->GetObj();	// 부딪힌 상대의 object를 받아옴
-	if (pOtherObj->GetName() == L"Missale_Player")
+	if (pOtherObj->GetName() == L"Player")
+	{
+		DeleteObject(this);
+		CoinNum++;
+	}
+
+	if (pOtherObj->GetName() == L"Monster")
 	{
 		DeleteObject(this);
 	}
