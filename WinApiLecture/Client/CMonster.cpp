@@ -19,7 +19,7 @@ CMonster::CMonster()
 {
 	// 06/11 적 텍스쳐 추가
 	CreateCollider();
-	GetCollider()->SetScale(Vec2(40.f, 40.f));
+	GetCollider()->SetScale(Vec2(110.f, 110.f));
 
 	CreateAnimator();
 	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"MonsterTex", L"texture\\pepper.bmp");
@@ -28,9 +28,9 @@ CMonster::CMonster()
 		L"Monster",
 		pTex,
 		Vec2(0.f, 0.f),
-		Vec2(272.f, 272.f),
-		Vec2(272.f, 0.f),
-		0.5f,
+		Vec2(200.f, 200.f),
+		Vec2(200.f, 0.f),
+		0.3f,
 		4);
 }
 

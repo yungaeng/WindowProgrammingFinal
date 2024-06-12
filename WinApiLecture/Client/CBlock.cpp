@@ -13,6 +13,7 @@
 #include "CCollider.h"
 #include "CAnimator.h"
 #include "CAnimation.h"
+#include "CGravity.h"
 
 
 
@@ -20,7 +21,7 @@ CBlock::CBlock()
 {
 	CreateCollider();
 	GetCollider()->SetOffsetPos(Vec2(0.f, 0.f));
-	GetCollider()->SetScale(Vec2(40.f, 40.f));
+	GetCollider()->SetScale(Vec2(100.f, 100.f));
 
 	CreateAnimator();
 	// 캐릭터의 상태를 먼저 설정한 후 , 그 상태에 맞게 캐릭터의 애니메이션을 정하자.
@@ -79,6 +80,26 @@ void CBlock::render(HDC _dc)
 
 void CBlock::OnCollisionEnter(CCollider* _pOther)
 {
+	CObject* pOtherObj = _pOther->GetObj();
+	if (pOtherObj->GetName() == L"Player")
+	{
+		pOtherObj->GetGravity()->SetGround(true);
+
+		Vec2 vObjPos = _pOther->GetFinalPos();
+		Vec2 vObjScale = _pOther->GetScale();
+
+		Vec2 vPos = GetCollider()->GetFinalPos();
+		Vec2 vScale = GetCollider()->GetScale();
+
+		// 두 세로 반경의 절반 간의 합 - 두 중심점과의 차이 = 파고든 거리
+		float fLen = abs(vObjPos.y - vPos.y);
+		float fValue = (vObjScale.y / 2.f + vScale.y / 2.f) - fLen;
+
+		// 파고든 거리만큼 올려줌
+		vObjPos = pOtherObj->GetPos();
+		vObjPos.y -= (fValue);
+		pOtherObj->SetPos(vObjPos);
+	}
 }
 
 void CBlock::OnCollision(CCollider* _pOther)

@@ -199,31 +199,49 @@ void CScene_Start::Enter()
 	//LoadTile(L"Tile\\Start.tile");
 	// 
 	// 땅 물체 배치 
-	CObject* pGround = new CGround;
-	pGround->SetName(L"Ground");
-	pGround->SetPos(Vec2(0.f, 584.f));
-	pGround->SetScale(Vec2(60000.f, 60.f));
-	AddObject(pGround, GROUP_TYPE::GROUND);
+	CObject* pGround1 = new CGround;
+	pGround1->SetName(L"Ground");
+	pGround1->SetPos(Vec2(3500.f, 800.f));
+	pGround1->SetScale(Vec2(7000.f, 400.f));
+	AddObject(pGround1, GROUP_TYPE::GROUND);
+
+	CObject* pGround2 = new CGround;
+	pGround2->SetName(L"Ground");
+	pGround2->SetPos(Vec2(8700.f, 800.f));
+	pGround2->SetScale(Vec2(3000.f, 400.f));
+	AddObject(pGround2, GROUP_TYPE::GROUND);
+
+	CObject* pGround3 = new CGround;
+	pGround3->SetName(L"Ground");
+	pGround3->SetPos(Vec2(12400.f, 800.f));
+	pGround3->SetScale(Vec2(4000.f, 400.f));
+	AddObject(pGround3, GROUP_TYPE::GROUND);
+
+	CObject* pGround4 = new CGround;
+	pGround4->SetName(L"Ground");
+	pGround4->SetPos(Vec2(17600.f, 800.f));
+	pGround4->SetScale(Vec2(6000.f, 400.f));
+	AddObject(pGround4, GROUP_TYPE::GROUND);
 
 	// 가로등 추가
-	for (int i = 0; i < 60; ++i)
+	for (int i = 0; i < 4; ++i)
 	{
 		CObject* pBlock = new CBlock;
 		pBlock->SetName(L"Block");
-		pBlock->SetPos(Vec2(0.f+1000.f*i, 400.f));
-		pBlock->SetScale(Vec2(60.f, 400.f));
+		pBlock->SetPos(Vec2(3500.f+500.f*i, 600.f-100.f*i));
+		pBlock->SetScale(Vec2(100.f, 500.f));
 		AddObject(pBlock, GROUP_TYPE::BLOCK);
 	}
 
 	// 코인 추가
-	for (int i = 0; i < 600; ++i)
+	/*for (int i = 0; i < 600; ++i)
 	{
 		CObject* pBlock = new CBlock;
 		pBlock->SetName(L"Coin");
-		pBlock->SetPos(Vec2(0.f + 100.f * i, 400.f));
+		pBlock->SetPos(Vec2(0.f + 101.f * i, 500.f));
 		pBlock->SetScale(Vec2(40.f, 40.f));
-		AddObject(pBlock, GROUP_TYPE::BLOCK);
-	}
+		AddObject(pBlock, GROUP_TYPE::COIN);
+	}*/
 
 	// 적 추가
 	for (int i = 0; i < 60; ++i)
@@ -241,6 +259,7 @@ void CScene_Start::Enter()
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::GROUND);
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::BLOCK);
+	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::COIN);
 	//CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 
 	// 카메라 LookAt 지정

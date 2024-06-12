@@ -36,7 +36,7 @@ CPlayer::CPlayer()
 	// 충돌체의 offset을 수정하여 파이널 pos 적용시 그만큼 이동시켜 적용시킴
 	GetCollider()->SetOffsetPos(Vec2(10.f, 0.f));
 	// 충돌체의 크기 설정
-	GetCollider()->SetScale(Vec2(110.f, 130.f));
+	GetCollider()->SetScale(Vec2(80.f, 130.f));
 
 
 	// 애니메이터 컴포넌트 생성

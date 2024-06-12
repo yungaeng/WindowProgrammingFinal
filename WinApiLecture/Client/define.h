@@ -41,6 +41,8 @@ enum class GROUP_TYPE
 	PROJ_MONSTER,	// 몬스터 투사체
 
 
+	COIN,	// 코인 타입 추가
+
 	// 여기서 UI는 모든 오브젝트의 위에 그려지도록 순서 조정
 	UI = 31,
 	END = 32,
