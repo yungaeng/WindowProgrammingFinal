@@ -78,12 +78,9 @@ void CMonster::OnCollisionEnter(CCollider* _pOther)
 {
 	CObject* pOtherObj = _pOther->GetObj();	// ºÎµúÈù »ó´ëÀÇ object¸¦ ¹Þ¾Æ¿È
 	//// ºÎµúÈù »ó´ë »ý°¢ÇÏ±â
-	if (pOtherObj->GetName() == L"Missale_Player")
+	if (pOtherObj->GetName() == L"Player")
 	{
-		m_tInfo.fHP -= 25;
-
-		if(m_tInfo.fHP <= 0)
- 			DeleteObject(this);
+		
 	}
 }
 
