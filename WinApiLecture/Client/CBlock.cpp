@@ -41,25 +41,10 @@ CBlock::CBlock()
 		Vec2(103.5f, 0.f),
 		0.2f,
 		6);
-
-	GetAnimator()->CreateAnimation(
-	L"IDEL_2",
-		pTex,
-		Vec2(0.f, 3200.f),
-		Vec2(3200.f, 3200.f),
-		Vec2(3200.f, 0.f),
-		0.2f,
-		2);
 }
 
 CBlock::~CBlock()
 {
-}
-
-// 06/13 코인넘을 반환하는 함수 추가
-int CBlock::HowManyCoin()
-{
-	return CoinNum;
 }
 
 void CBlock::update()

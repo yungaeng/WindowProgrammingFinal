@@ -34,6 +34,7 @@ enum class GROUP_TYPE
 	TILE,
 	BLOCK,
 	GROUND,
+	FLAG,	//0613 깃발 추가
 
 	MONSTER,
 	PLAYER,
@@ -54,6 +55,10 @@ enum class SCENE_TYPE
 	START,
 	STAGE_01,
 	STAGE_02,
+
+
+	//end scene 추가
+	EnD,
 
 	END,
 };

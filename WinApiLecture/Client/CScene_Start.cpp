@@ -18,7 +18,7 @@
 #include "CTimeMgr.h"
 #include "CGround.h"
 #include "CBlock.h"
-
+#include "CFlag.h"
 
 CScene_Start::CScene_Start()
 	:m_bUseForce(false)
@@ -114,6 +114,8 @@ void CScene_Start::render(HDC _dc)
 		, (int)(vRenderPos.y + m_fCurRadius));
 		//m_vForcePos;
 
+	
+	TextOutA(_dc, 10, 10, "COIN :", 10);
 }
 
 void CScene_Start::Enter()
@@ -223,7 +225,7 @@ void CScene_Start::Enter()
 	{
 		CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
-		pMonster->SetPos(Vec2(2000.f + 300.f * i, 540.f));
+		pMonster->SetPos(Vec2(2000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
 		AddObject(pMonster, GROUP_TYPE::MONSTER);
 	}
@@ -231,7 +233,7 @@ void CScene_Start::Enter()
 	{
 		CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
-		pMonster->SetPos(Vec2(8000.f + 300.f * i, 540.f));
+		pMonster->SetPos(Vec2(8000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
 		AddObject(pMonster, GROUP_TYPE::MONSTER);
 	}
@@ -239,7 +241,7 @@ void CScene_Start::Enter()
 	{
 		CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
-		pMonster->SetPos(Vec2(11000.f + 300.f * i, 540.f));
+		pMonster->SetPos(Vec2(11000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
 		AddObject(pMonster, GROUP_TYPE::MONSTER);
 	}
@@ -247,11 +249,17 @@ void CScene_Start::Enter()
 	{
 		CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
-		pMonster->SetPos(Vec2(16000.f + 300.f * i, 540.f));
+		pMonster->SetPos(Vec2(16000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
 		AddObject(pMonster, GROUP_TYPE::MONSTER);
 	}
 	
+	// 깃발 추가
+	CObject* pFlag = new CFlag;
+	pFlag->SetName(L"Flag");
+	pFlag->SetPos(Vec2(20300.f, 540.f));
+	pFlag->SetScale(Vec2(400.f, 400.f));
+	AddObject(pFlag, GROUP_TYPE::FLAG);
 
 	// 충돌 지정
 	// Player 그룹과 Monster 그룹 간의 충돌 지정
@@ -259,8 +267,10 @@ void CScene_Start::Enter()
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::GROUND);
 
+	// 캐릭터와 충돌
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::BLOCK);
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::COIN);
+	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::FLAG);
 
 	// 몬스터와 코인이 충돌하면 코인 삭제 06/13
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::COIN);

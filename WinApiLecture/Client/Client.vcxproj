@@ -171,6 +171,7 @@
     <ClInclude Include="CRigidBody.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
+    <ClInclude Include="CScene_End.h" />
     <ClInclude Include="CScene_Start.h" />
     <ClInclude Include="CScene_Tool.h" />
     <ClInclude Include="CSound.h" />
@@ -183,6 +184,7 @@
     <ClInclude Include="CUI.h" />
     <ClInclude Include="CUIMgr.h" />
     <ClInclude Include="define.h" />
+    <ClInclude Include="CFlag.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="func.h" />
     <ClInclude Include="global.h" />
@@ -226,6 +228,7 @@
     <ClCompile Include="CRigidBody.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
+    <ClCompile Include="CScene_End.cpp" />
     <ClCompile Include="CScene_Start.cpp" />
     <ClCompile Include="CScene_Tool.cpp" />
     <ClCompile Include="CSound.cpp" />
@@ -237,6 +240,7 @@
     <ClCompile Include="CTraceState.cpp" />
     <ClCompile Include="CUI.cpp" />
     <ClCompile Include="CUIMgr.cpp" />
+    <ClCompile Include="CFlag.cpp" />
     <ClCompile Include="func.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SelectGDI.cpp" />

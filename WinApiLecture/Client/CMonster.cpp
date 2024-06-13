@@ -19,7 +19,7 @@ CMonster::CMonster()
 {
 	// 06/11 적 텍스쳐 추가
 	CreateCollider();
-	GetCollider()->SetScale(Vec2(110.f, 110.f));
+	GetCollider()->SetScale(Vec2(100.f, 100.f));
 
 	CreateAnimator();
 	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"MonsterTex", L"texture\\pepper.bmp");
@@ -80,7 +80,8 @@ void CMonster::OnCollisionEnter(CCollider* _pOther)
 	//// 부딪힌 상대 생각하기
 	if (pOtherObj->GetName() == L"Player")
 	{
-		
+		// 추가 바람 : 
+		// 플레이어와 충돌하면??
 	}
 }
 

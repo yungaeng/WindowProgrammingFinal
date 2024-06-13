@@ -16,12 +16,8 @@ public:
 
 
     CLONE(CBlock);
-private:
-    int CoinNum = 0;
 public:
     CBlock();
     ~CBlock();
-    // 06/13 얼마나 코인을 먹었니? 알려주는 함수
-    int HowManyCoin();
 };
 
