@@ -79,7 +79,6 @@ void CBlock::OnCollision(CCollider* _pOther)
 	if (pOtherObj->GetName() == L"Player")
 	{
 		DeleteObject(this);
-		CoinNum++;
 	}
 
 	if (pOtherObj->GetName() == L"Monster")

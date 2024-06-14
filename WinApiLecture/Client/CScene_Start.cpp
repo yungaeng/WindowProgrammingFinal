@@ -192,11 +192,41 @@ void CScene_Start::Enter()
 	pGround1->SetScale(Vec2(7000.f, 400.f));
 	AddObject(pGround1, GROUP_TYPE::GROUND);
 
+	CObject* pGround11 = new CGround;
+	pGround11->SetName(L"Ground");
+	pGround11->SetPos(Vec2(4000.f, 340.f));
+	pGround11->SetScale(Vec2(700.f, 100.f));
+	AddObject(pGround11, GROUP_TYPE::GROUND);
+
 	CObject* pGround2 = new CGround;
 	pGround2->SetName(L"Ground");
 	pGround2->SetPos(Vec2(8700.f, 800.f));
 	pGround2->SetScale(Vec2(3000.f, 400.f));
 	AddObject(pGround2, GROUP_TYPE::GROUND);
+
+	CObject* pGround21 = new CGround;
+	pGround21->SetName(L"Ground");
+	pGround21->SetPos(Vec2(9000.f, 340.f));
+	pGround21->SetScale(Vec2(700.f, 100.f));
+	AddObject(pGround21, GROUP_TYPE::GROUND);
+
+	CObject* pGround22 = new CGround;
+	pGround22->SetName(L"Ground");
+	pGround22->SetPos(Vec2(10000.f, 140.f));
+	pGround22->SetScale(Vec2(300.f, 100.f));
+	AddObject(pGround22, GROUP_TYPE::GROUND);
+
+	CObject* pGround23 = new CGround;
+	pGround23->SetName(L"Ground");
+	pGround23->SetPos(Vec2(11000.f, 340.f));
+	pGround23->SetScale(Vec2(300.f, 100.f));
+	AddObject(pGround23, GROUP_TYPE::GROUND);
+
+	CObject* pGround24 = new CGround;
+	pGround24->SetName(L"Ground");
+	pGround24->SetPos(Vec2(113000.f, 340.f));
+	pGround24->SetScale(Vec2(500.f, 100.f));
+	AddObject(pGround21, GROUP_TYPE::GROUND);
 
 	CObject* pGround3 = new CGround;
 	pGround3->SetName(L"Ground");
@@ -221,6 +251,8 @@ void CScene_Start::Enter()
 	}
 
 	// 적 추가 4/2/6/2
+	// 추후 몬스터 팩토리로 구현 예정
+	// 몬스터 충돌 시 애니메이션 및 움직임 구현 후 변경 해주세요
 	for (int i = 0; i < 4; ++i)
 	{
 		CObject* pMonster = new CMonster;
