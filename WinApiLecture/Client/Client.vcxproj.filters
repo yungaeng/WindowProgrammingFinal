@@ -152,6 +152,9 @@
     <Filter Include="Engine\05. Scene\END">
       <UniqueIdentifier>{62f659ef-c8c2-457e-8069-c7e00b6ad0ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\04. Object\BackGround">
+      <UniqueIdentifier>{db75fe9b-a2e1-4bd5-b8f0-90449c10dc08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -299,6 +302,9 @@
     <ClInclude Include="CScene_End.h">
       <Filter>Engine\05. Scene\END</Filter>
     </ClInclude>
+    <ClInclude Include="CBackGround.h">
+      <Filter>Engine\04. Object\BackGround</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
@@ -432,6 +438,9 @@
     </ClCompile>
     <ClCompile Include="CScene_End.cpp">
       <Filter>Engine\05. Scene\END</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackGround.cpp">
+      <Filter>Engine\04. Object\BackGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

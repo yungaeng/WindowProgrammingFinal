@@ -29,6 +29,7 @@ CCore::CCore()
 	,m_arrBrush{}
 	,m_arrPen{}
 	,m_hMenu(0)
+	,m_iCoin(0)
 {
 	
 }

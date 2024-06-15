@@ -1,12 +1,20 @@
 #include "pch.h"
+#include "CCore.h"
+#include "CSceneMgr.h"
+#include "CScene.h"
+#include "CTexture.h"
 #include "CGround.h"
 #include "CCollider.h"
+#include "CResMgr.h"
 #include "CGravity.h"
 
 
 CGround::CGround()
 {
 	CreateCollider();
+	m_pTex = CResMgr::GetInst()->LoadTexture(L"GroundTex", L"texture\\Ground3.bmp");
+
+
 }
 
 CGround::~CGround()
@@ -20,6 +28,26 @@ void CGround::start()
 
 void CGround::update()
 {
+}
+
+void CGround::render(HDC _dc)
+{
+	Vec2 vPos = GetPos();
+	Vec2 vScale = GetScale();
+	Vec2 vResolution = CCore::GetInst()->GetResolution();
+
+	vPos = CCamera::GetInst()->GetRenderPos(vPos);
+
+	float width = (float)m_pTex->Width();
+	float height = (float)m_pTex->Height();
+
+	TransparentBlt(_dc,
+		vPos.x - (float)(vScale.x / 2)
+		, vPos.y - (float)(vScale.y / 2)
+		, vScale.x, vScale.y
+		, m_pTex->GetDC()
+		, 0, 0, width, height
+		, RGB(255,0,255));
 }
 
 void CGround::OnCollisionEnter(CCollider* _pOther)

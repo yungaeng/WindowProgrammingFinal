@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "CCore.h"
 #include "CPlayer.h"
 #include "CKeyMgr.h"
 #include "CTimeMgr.h"
@@ -460,15 +461,17 @@ void CPlayer::OnCollisionEnter(CCollider* _pOther)
 		if (vPos.y < vOtherPos.y)
 		{
 			m_iJumpStack = 2;
-			m_eCurState = PLAYER_STATE::IDLE;
 		}
+		m_eCurState = PLAYER_STATE::WALK;
 	}
-
 	if (L"Coin" == pOtherObj->GetName())
 	{
+		CCore::GetInst()->m_iCoin += 1;
 		DeleteObject(_pOther->GetObj());
 	}
 }
+
+
 
 //void CPlayer::render()
 //{

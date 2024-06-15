@@ -43,7 +43,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 실행된 프로세�
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     
   
-    // _CrtSetBreakAlloc(219);
+    // _CrtSetBreakAlloc(117156);
     // 문제가 생겼을 경우 문제에 중단점을 걸어주는 기능 - 누수 발생시 번호를 넣어 실행해준다.
     // 문제 해결 한 후에는 다시 주석 걸어놓을 것
 

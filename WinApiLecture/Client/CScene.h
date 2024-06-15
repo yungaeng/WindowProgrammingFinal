@@ -49,6 +49,7 @@ public:
 	{
 		m_arrObj[(UINT)_eType].push_back(_pObj);
 	}
+
 	void RegisterPlayer(CObject* _pPlayer) { m_pPlayer = _pPlayer; }
 
 	// 그냥 반환하면 복사해서 반환하기 때문에 복사비용이 추가됨, 따라서 원본 자체를 준다but 수정불가const

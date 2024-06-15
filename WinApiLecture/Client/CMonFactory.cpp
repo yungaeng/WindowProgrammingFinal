@@ -17,6 +17,9 @@ CMonster* CMonFactory::CreateMonster(MON_TYPE _eType, Vec2 _vPos)
 	{
 		pMon = new CMonster;
 		pMon->SetPos(_vPos);
+		pMon->m_vCenterPos = _vPos;
+		pMon->SetName(L"Monster");
+		pMon->SetScale(Vec2(40.f, 40.f));
 
 		tMonInfo info = {};
 		info.fAtt = 10.f;
@@ -29,12 +32,14 @@ CMonster* CMonFactory::CreateMonster(MON_TYPE _eType, Vec2 _vPos)
 
 		pMon->CreateRigidBody();
 		pMon->GetRigidBody()->SetMass(1.f);
-		/*AI* pAI = new AI;
-		pAI->AddState(new CIdleState);
-		pAI->AddState(new CTraceState);
-		pAI->SetCurState(MON_STATE::IDLE);
 
-		pMon->SetAI(pAI);*/
+
+	//	AI* pAI = new AI;
+	//	pAI->AddState(new CIdleState);
+	////	pAI->AddState(new CTraceState);
+	//	pAI->SetCurState(MON_STATE::IDLE);
+
+	//	pMon->SetAI(pAI);
 	}
 		break;
 

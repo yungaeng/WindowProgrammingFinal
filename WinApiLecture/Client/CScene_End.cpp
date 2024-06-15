@@ -91,6 +91,7 @@ void CScene_End::Enter()
 
 	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::GROUND);
 
+
 	start();
 }
 

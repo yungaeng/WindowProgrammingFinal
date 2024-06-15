@@ -25,7 +25,7 @@ CScene::~CScene()
 	{
 		for (size_t j = 0; j < m_arrObj[i].size(); ++j)
 		{
-			// m_arrObj[i] 그룹 벡터의 j번쨰 물체 삭제
+			// m_arrObj[i] 그룹 벡터의 j번째 물체 삭제
  			delete m_arrObj[i][j];
 		}
 	}

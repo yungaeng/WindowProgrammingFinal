@@ -22,11 +22,12 @@ private:
     AI*          m_pAI;              // AI
 
     Vec2    m_vCenterPos;       // 중심점
-    //float   m_fSpeed;           // 속도
-    //float   m_fMaxDistance;     // 최대 이동거리
-    //int     m_iDir;             // 1이면 오른쪽, -1이면 왼쪽
+    float   m_fSpeed;           // 속도
+    float   m_fMaxDistance;     // 최대 이동거리
+    int     m_iDir;             // 1이면 오른쪽, -1이면 왼쪽
     //int     m_iHP;
-
+    bool m_bGoneDead;         // 죽는 상태 활성 유무
+    float m_fDeadTime;
  
 
 public:
@@ -49,6 +50,7 @@ public:
     virtual void OnCollisionExit(CCollider* _pOther);
 public:
     virtual void update();
+    virtual void render(HDC _dc);
 
 
     CMonster* Clone() { return new CMonster(*this); }

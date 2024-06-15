@@ -32,12 +32,12 @@ void CIdleState::update()
 	Vec2 vDiff = vPlayerPos - vMonPos;
 	float fLen = vDiff.Length();
 
-	// 인지범위 내로 들어왔다면, 상태를 전환한다.
-	if (fLen < pMonster->GetMonInfo().fRecgRange)
-	{
-		// 상태 전환 시 일관성 있는 상태에 따른 업데이트, 렌더가 필요하므로 이벤트에 등록하여 준다.
-		ChangeAIState(GetAI(), MON_STATE::TRACE);
-	}
+	//// 인지범위 내로 들어왔다면, 상태를 전환한다.
+	//if (fLen < pMonster->GetMonInfo().fRecgRange)
+	//{
+	//	// 상태 전환 시 일관성 있는 상태에 따른 업데이트, 렌더가 필요하므로 이벤트에 등록하여 준다.
+	//	ChangeAIState(GetAI(), MON_STATE::TRACE);
+	//}
 }
 
 void CIdleState::Enter()

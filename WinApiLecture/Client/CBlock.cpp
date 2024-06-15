@@ -78,6 +78,7 @@ void CBlock::OnCollision(CCollider* _pOther)
 	CObject* pOtherObj = _pOther->GetObj();	// 부딪힌 상대의 object를 받아옴
 	if (pOtherObj->GetName() == L"Player")
 	{
+		// 06/15 코인 개수 세기
 		DeleteObject(this);
 	}
 

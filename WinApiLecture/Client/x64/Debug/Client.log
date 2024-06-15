@@ -1,3 +1,31 @@
-﻿  unity_8W3AUBMVRWQTPYXO.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\Unity\unity_MSWHWV9N0H86MKXA.cpp' 경로의 일부를 찾을 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\Unity\unity_6KTKLFD6GM1LQE9I.cpp' 경로의 일부를 찾을 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\Unity\unity_XL2OJ462VBB39SAX.cpp' 경로의 일부를 찾을 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\Unity\unity_9S3SPHPJ5J2496N0.cpp' 경로의 일부를 찾을 수 없습니다.
+  unity_DV5IUEJCL0QGM6W8.cpp
+  unity_CK31T983XAJEFOTV.cpp
+  unity_H3FSYLG1HF21YO3Y.cpp
+  unity_MRX81VH3YVK2MYDK.cpp
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  Client.vcxproj -> C:\Users\yun\Desktop\WindowProgrammingFinal\WinApiLecture\Output\bin_debug\Client.exe
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(49,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(49,11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(47,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(47,11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(46,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(45,10): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(123,19): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(123,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(121,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(121,15): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(120,13): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(119,11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CBackGround.cpp(46,16): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CBackGround.cpp(46,9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CBackGround.cpp(44,31): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CBackGround.cpp(44,16): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CBackGround.cpp(43,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CBackGround.cpp(42,10): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\xutility(4672,18): warning C4244: '=': 'wchar_t'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\xutility(4672,18): warning C4244: '=': 'const wchar_t'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Client.vcxproj -> C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Output\bin_debug\Client.exe

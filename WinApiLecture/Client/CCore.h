@@ -96,6 +96,7 @@ private:
 
 	HBITMAP m_hBit;
 	HDC m_memDC;
+	
 
 	// 자주 사용하는 GDI Object
 	HBRUSH	m_arrBrush[(UINT)BRUSH_TYPE::END];
@@ -103,6 +104,13 @@ private:
 
 
 	HMENU	m_hMenu;	// tool_scene에서 사용할 메뉴
+
+
+public:
+	int m_iCoin;		// 프로그램 중 코인의 개수
+
+
+
 public :
 	int init(HWND _hWnd,POINT _ptResolution);
 	void progress();

@@ -32,6 +32,7 @@ enum class GROUP_TYPE
 	// 그려지는 순서 또한 중요
 	DEFAULT,
 	TILE,
+	BG,
 	BLOCK,
 	GROUND,
 	FLAG,	//0613 깃발 추가
@@ -53,12 +54,15 @@ enum class SCENE_TYPE
 {
 	TOOL,
 	START,
+	//end scene 추가
+	EnD,
+
+
 	STAGE_01,
 	STAGE_02,
 
 
-	//end scene 추가
-	EnD,
+	
 
 	END,
 };

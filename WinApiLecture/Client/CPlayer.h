@@ -45,11 +45,11 @@ class CPlayer :
 private:
   //  CTexture* m_pTex;
 
-    PLAYER_STATE    m_eCurState;
-    PLAYER_STATE    m_ePrevState;
+    PLAYER_STATE            m_eCurState;
+    PLAYER_STATE            m_ePrevState;
     PLAYER_JUMP_STATE       m_eCurJumpState;
     PLAYER_JUMP_STATE       m_ePrevJumpState;
-    int             m_iJumpStack;   // 점프 가능 횟수
+    int                     m_iJumpStack;   // 점프 가능 횟수
 
     public:
         virtual void update();
@@ -59,7 +59,7 @@ private:
     void update_state();
     void update_move();
     void update_animation();
-    void update_gravity();
+  //  void update_gravity();
 
     virtual void OnCollisionEnter(CCollider* _pOther);
 

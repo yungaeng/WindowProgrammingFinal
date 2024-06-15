@@ -19,6 +19,7 @@
 #include "CGround.h"
 #include "CBlock.h"
 #include "CFlag.h"
+#include "CBackGround.h"
 
 CScene_Start::CScene_Start()
 	:m_bUseForce(false)
@@ -84,7 +85,7 @@ void CScene_Start::update()
 						
 					}
 				}
-				
+				// ★★★★★각오브젝트의 업데이트 수행★★★★★
 				vecObj[j]->update();
 			}
 		}
@@ -95,12 +96,12 @@ void CScene_Start::render(HDC _dc)
 {
 	CScene::render(_dc);
 
-	if (!m_bUseForce)
-		return;
-	SelectGDI gdi1(_dc,BRUSH_TYPE::HOLLOW);
-	SelectGDI gdi2(_dc, PEN_TYPE::GREEN);
+	//if (!m_bUseForce)
+	//	return;
+	//SelectGDI gdi1(_dc,BRUSH_TYPE::HOLLOW);
+	//SelectGDI gdi2(_dc, PEN_TYPE::GREEN);
 
-	m_fCurRadius += m_fForceRadius * 2.f * fDT;
+	/*m_fCurRadius += m_fForceRadius * 2.f * fDT;
 	if (m_fCurRadius > m_fForceRadius)
 	{
 		m_fCurRadius = 0.f;
@@ -111,22 +112,36 @@ void CScene_Start::render(HDC _dc)
 		, (int)(vRenderPos.x - m_fCurRadius)
 		, (int)(vRenderPos.y - m_fCurRadius)
 		, (int)(vRenderPos.x + m_fCurRadius)
-		, (int)(vRenderPos.y + m_fCurRadius));
+		, (int)(vRenderPos.y + m_fCurRadius));*/
 		//m_vForcePos;
 
-	
-	TextOutA(_dc, 10, 10, "COIN :", 10);
+	wchar_t wsCoin[100] = L"coin";
+	wsprintfW(wsCoin, L"COIN : %d ", CCore::GetInst()->m_iCoin);
+	TextOut(_dc, 10, 10, wsCoin, lstrlenW(wsCoin));
 }
 
 void CScene_Start::Enter()
 {
+
+
+
 	// 해당 신이 시작될 때
+	// CObject : 백그라운드 추가
+	CObject* pObj1 = new CBackGround;
+	pObj1->SetName(L"BG");
+	pObj1->SetPos(Vec2(0.f, 384.f));
+	pObj1->SetScale(Vec2(100.f, 100.f));
+	AddObject(pObj1, GROUP_TYPE::BG);
+
+
 	// CObject : CPlayer 추가
 	CObject* pObj = new CPlayer;
 	pObj->SetName(L"Player");
 	pObj->SetPos(Vec2(0.f,384.f));
 	pObj->SetScale(Vec2(100.f,100.f));
 	AddObject(pObj, GROUP_TYPE::PLAYER);
+
+
 
 	// 현재 씬에 플레이어 등록
 	RegisterPlayer(pObj);
@@ -185,7 +200,7 @@ void CScene_Start::Enter()
 	// 
 	// 
 
-	// 땅 물체 배치 
+	//// 땅 물체 배치 
 	CObject* pGround1 = new CGround;
 	pGround1->SetName(L"Ground");
 	pGround1->SetPos(Vec2(3500.f, 800.f));
@@ -226,7 +241,7 @@ void CScene_Start::Enter()
 	pGround24->SetName(L"Ground");
 	pGround24->SetPos(Vec2(113000.f, 340.f));
 	pGround24->SetScale(Vec2(500.f, 100.f));
-	AddObject(pGround21, GROUP_TYPE::GROUND);
+	AddObject(pGround24, GROUP_TYPE::GROUND);
 
 	CObject* pGround3 = new CGround;
 	pGround3->SetName(L"Ground");
@@ -253,37 +268,56 @@ void CScene_Start::Enter()
 	// 적 추가 4/2/6/2
 	// 추후 몬스터 팩토리로 구현 예정
 	// 몬스터 충돌 시 애니메이션 및 움직임 구현 후 변경 해주세요
+
+	//CMonster* pMon = CMonFactory::CreateMonster(MON_TYPE::NORMAL, vResolution / 2.f - Vec2(0.f, 300.f));
+	//AddObject(pMon, GROUP_TYPE::MONSTER);
 	for (int i = 0; i < 4; ++i)
 	{
-		CObject* pMonster = new CMonster;
+	/*	CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
 		pMonster->SetPos(Vec2(2000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
-		AddObject(pMonster, GROUP_TYPE::MONSTER);
+		AddObject(pMonster, GROUP_TYPE::MONSTER);*/
+
+
+		CMonster* pMon = CMonFactory::CreateMonster(MON_TYPE::NORMAL, Vec2(2000.f + 500.f * i, 540.f));
+		AddObject(pMon, GROUP_TYPE::MONSTER);
 	}
 	for (int i = 0; i < 2; ++i)
 	{
-		CObject* pMonster = new CMonster;
+		/*CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
 		pMonster->SetPos(Vec2(8000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
-		AddObject(pMonster, GROUP_TYPE::MONSTER);
+		AddObject(pMonster, GROUP_TYPE::MONSTER);*/
+
+
+		CMonster* pMon = CMonFactory::CreateMonster(MON_TYPE::NORMAL, Vec2(8000.f + 500.f * i, 540.f));
+		AddObject(pMon, GROUP_TYPE::MONSTER);
 	}
 	for (int i = 0; i < 6; ++i)
 	{
-		CObject* pMonster = new CMonster;
+	/*	CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
 		pMonster->SetPos(Vec2(11000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
-		AddObject(pMonster, GROUP_TYPE::MONSTER);
+		AddObject(pMonster, GROUP_TYPE::MONSTER);*/
+
+
+		CMonster* pMon = CMonFactory::CreateMonster(MON_TYPE::NORMAL, Vec2(11000.f + 500.f * i, 540.f));
+		AddObject(pMon, GROUP_TYPE::MONSTER);
 	}
 	for (int i = 0; i < 2; ++i)
 	{
-		CObject* pMonster = new CMonster;
+		/*CObject* pMonster = new CMonster;
 		pMonster->SetName(L"Monster");
 		pMonster->SetPos(Vec2(16000.f + 500.f * i, 540.f));
 		pMonster->SetScale(Vec2(40.f, 40.f));
-		AddObject(pMonster, GROUP_TYPE::MONSTER);
+		AddObject(pMonster, GROUP_TYPE::MONSTER);*/
+
+
+		CMonster* pMon = CMonFactory::CreateMonster(MON_TYPE::NORMAL, Vec2(16000.f + 500.f * i, 540.f));
+		AddObject(pMon, GROUP_TYPE::MONSTER);
 	}
 	
 	// 깃발 추가
@@ -292,6 +326,14 @@ void CScene_Start::Enter()
 	pFlag->SetPos(Vec2(20300.f, 540.f));
 	pFlag->SetScale(Vec2(400.f, 400.f));
 	AddObject(pFlag, GROUP_TYPE::FLAG);
+
+	////테스트용 깃발 추가
+	//CObject* pFlag2 = new CFlag;
+	//pFlag2->SetName(L"Flag");
+	//pFlag2->SetPos(Vec2(300.f, 540.f));
+	//pFlag2->SetScale(Vec2(400.f, 400.f));
+	//AddObject(pFlag2, GROUP_TYPE::FLAG);
+
 
 	// 충돌 지정
 	// Player 그룹과 Monster 그룹 간의 충돌 지정
@@ -310,7 +352,7 @@ void CScene_Start::Enter()
 	//CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 
 	// 카메라 LookAt 지정
-	CCamera::GetInst()->SetLookAt(vResolution / 2.f);
+	//CCamera::GetInst()->SetLookAt(vResolution / 2.f);
 
 	start();
 }

@@ -14,6 +14,7 @@ class CGravity;
 class CObject
 {
 private:
+
 	wstring			m_strName;	// Name = 무슨 오브젝트인지 체크
 	Vec2			m_vPos;		// 좌표 정보
 	Vec2			m_vScale;	// 크기 정보
@@ -35,7 +36,7 @@ public:
 
 	void SetName(const wstring& _strName) { m_strName = _strName; }
 	wstring& GetName() { return m_strName; }
-
+	
 	CCollider* GetCollider() { return m_pCollider; }
 	CAnimator* GetAnimator() { return m_pAnimator; }
 	CRigidBody* GetRigidBody() { return m_pRigidBody; }
