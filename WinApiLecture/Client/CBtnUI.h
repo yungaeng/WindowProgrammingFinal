@@ -7,6 +7,7 @@
 class CScene;
 class CScene_Tool;
 class CObject;
+class CTexture;
 
 
 
@@ -31,11 +32,14 @@ private:
 
     SCENE_MEMFUNC   m_pSceneFunc;       // 그 객체가 호출할 함수
     CScene*         m_pSceneInst;       // 호출을 시킬 객체
+   // CTexture*       m_pTex;             // 보유한 텍스처
 public:
+
     virtual void MouseOn();             // 해당 UI에 마우스가 올라온 경우 호출
     virtual void MouseLbtnDown();       // 마우스가 올라운 경우에서 눌렸을 때 호출
     virtual void MouseLbtnUp();         // 마우스가 떼졌을 때
     virtual void MouseLbtnClicked();
+    //virtual void render(HDC _dc);
 
     void SetClickedCallBack(BTN_FUNC _pFunc,DWORD_PTR _param1, DWORD_PTR _param2)
     {
@@ -45,6 +49,8 @@ public:
     }
     void SetClickedCallBack(CScene* _pScene, SCENE_MEMFUNC _pSceneFunc);
    
+
+    //void SetTex(CTexture* _pTex) { m_pTex = _pTex; }
 
     CLONE(CBtnUI);
 public:

@@ -42,21 +42,21 @@ void CCollider::finalupdate()
 
 void CCollider::render(HDC _dc)
 {
-	PEN_TYPE ePen = PEN_TYPE::GREEN;
-
-	if (m_iCol)
-		ePen = PEN_TYPE::RED;
-
-	// 임시 객체 생성으로 생성자 호출 및 지역변수 취급으로 함수 종료시 소멸자 호출(디폴트 펜,브러쉬 선택)
-	SelectGDI p (_dc,ePen);
-	SelectGDI d (_dc, BRUSH_TYPE::HOLLOW);
-	Vec2 vRenderPos = CCamera::GetInst()->GetRenderPos(m_vFinalPos);
-
-	Rectangle(_dc
-		,(int)(vRenderPos.x - m_vScale.x / 2.f)
-		,(int)(vRenderPos.y - m_vScale.y / 2.f)
-		,(int)(vRenderPos.x + m_vScale.x / 2.f)
-		,(int)(vRenderPos.y + m_vScale.y / 2.f));
+//	PEN_TYPE ePen = PEN_TYPE::GREEN;
+//
+//	if (m_iCol)
+//		ePen = PEN_TYPE::RED;
+//
+//	// 임시 객체 생성으로 생성자 호출 및 지역변수 취급으로 함수 종료시 소멸자 호출(디폴트 펜,브러쉬 선택)
+//	SelectGDI p (_dc,ePen);
+//	SelectGDI d (_dc, BRUSH_TYPE::HOLLOW);
+//	Vec2 vRenderPos = CCamera::GetInst()->GetRenderPos(m_vFinalPos);
+//
+//	Rectangle(_dc
+//		,(int)(vRenderPos.x - m_vScale.x / 2.f)
+//		,(int)(vRenderPos.y - m_vScale.y / 2.f)
+//		,(int)(vRenderPos.x + m_vScale.x / 2.f)
+//		,(int)(vRenderPos.y + m_vScale.y / 2.f));
 
 }
 

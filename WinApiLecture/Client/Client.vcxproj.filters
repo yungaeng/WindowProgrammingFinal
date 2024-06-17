@@ -155,6 +155,9 @@
     <Filter Include="Engine\04. Object\BackGround">
       <UniqueIdentifier>{db75fe9b-a2e1-4bd5-b8f0-90449c10dc08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\05. Scene\Intro">
+      <UniqueIdentifier>{0a58f21c-19b5-41fe-9a55-d2e499e95ec2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -305,6 +308,9 @@
     <ClInclude Include="CBackGround.h">
       <Filter>Engine\04. Object\BackGround</Filter>
     </ClInclude>
+    <ClInclude Include="CScene_Intro.h">
+      <Filter>Engine\05. Scene\Intro</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
@@ -421,9 +427,6 @@
     <ClCompile Include="CGravity.cpp">
       <Filter>Engine\07. Component\Gravity</Filter>
     </ClCompile>
-    <ClCompile Include="CGround.cpp">
-      <Filter>Engine\04. Object\Ground</Filter>
-    </ClCompile>
     <ClCompile Include="CBlock.cpp">
       <Filter>Engine\04. Object\Block</Filter>
     </ClCompile>
@@ -441,6 +444,12 @@
     </ClCompile>
     <ClCompile Include="CBackGround.cpp">
       <Filter>Engine\04. Object\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="CGround.cpp">
+      <Filter>Engine\04. Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Intro.cpp">
+      <Filter>Engine\05. Scene\Intro</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

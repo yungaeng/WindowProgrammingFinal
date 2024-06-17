@@ -10,11 +10,13 @@
 #include "CPathMgr.h"
 #include "CResMgr.h"
 #include "CTexture.h"
+#include "CSound.h"
 #include "CCollider.h"
 #include "CAnimator.h"
 #include "CAnimation.h"
 #include "CRigidBody.h"
 #include "CGravity.h"
+#include "CMonster.h"
 
 
 CPlayer::CPlayer()
@@ -23,7 +25,15 @@ CPlayer::CPlayer()
 	, m_ePrevState(PLAYER_STATE::WALK)
 	, m_eCurJumpState(PLAYER_JUMP_STATE::JUMP_UP)
 	, m_ePrevJumpState(PLAYER_JUMP_STATE::JUMP_DOWN)
+	, m_eCurGiantState(PLAYER_GIANT_STATE::GIANT_NOT)
+	, m_ePrevGiantState(PLAYER_GIANT_STATE::GIANT_ESCAPE)
 	, m_iJumpStack(2)
+	,m_fGiantTime(0.f)
+	,m_fDeatTime(0.f)
+	,m_iHP(5)
+	,m_fSlowTime(3)
+	,m_bSlow(false)
+	,m_bDir(false)
 {
 	// 강체 추가
 	CreateRigidBody();
@@ -39,6 +49,7 @@ CPlayer::CPlayer()
 	// 충돌체의 크기 설정
 	GetCollider()->SetScale(Vec2(80.f, 130.f));
 
+	SetScale(Vec2(10.f, 10.f));
 
 	// 애니메이터 컴포넌트 생성
 	CreateAnimator();
@@ -100,8 +111,8 @@ CPlayer::CPlayer()
 	GetAnimator()->CreateAnimation(
 		L"JUMP_UP",
 		pTex,
-		Vec2(5.f, 1365.f),
-		Vec2(267.f, 265.f),
+		Vec2(5.f, 1430.f),
+		Vec2(260.f, 140.f),
 		Vec2(272.f, 0.f),
 		0.1f,
 		1);
@@ -109,7 +120,7 @@ CPlayer::CPlayer()
 		L"JUMP_AIR",
 		pTex,
 		Vec2(277.f, 1365.f),
-		Vec2(267.f, 160.f),
+		Vec2(267.f, 130.f),
 		Vec2(272.f, 0.f),
 		0.2f,
 		2);
@@ -118,7 +129,7 @@ CPlayer::CPlayer()
 		L"JUMP_DOWN",
 		pTex,
 		Vec2(820.f, 1475.f),
-		Vec2(267.f, 150.f),
+		Vec2(267.f, 140.f),
 		Vec2(272.f, 0.f),
 		0.1f,
 		2);
@@ -138,6 +149,25 @@ CPlayer::CPlayer()
 		Vec2(272.f, 0.f),
 		0.1f,
 		1);
+
+	GetAnimator()->CreateAnimation(
+		L"Dead",
+		pTex,
+		Vec2(1362.f, 1220.f),
+		Vec2(268.f, 130.f),
+		Vec2(272.f, 0.f),
+		0.1f,
+		5);
+
+	GetAnimator()->CreateAnimation(
+		L"Dead_s",
+		pTex,
+		Vec2(2450.f, 1220.f),
+		Vec2(268.f, 130.f),
+		Vec2(272.f, 0.f),
+		5.f,
+		1);
+
 	// Animation 저장해보기
 //	GetAnimator()->FindAnimation(L"IDLE_TOP")->Save(L"animation\\player_idle_top.anim");
 	//GetAnimator()->FindAnimation(L"IDLE_BOTTOM")->Save(L"animation\\player_idle_bottom.anim");
@@ -190,15 +220,28 @@ void CPlayer::update()
 		SetPos(Vec2(640.f, 384.f));
 	}
 
+	if (KEY_TAP(KEY::D))
+	{
+		if (m_iHP != 0)
+		{
+			m_iHP = 0;
+			m_fDeatTime = 0.f;
+		}
+		else
+			m_iHP = 1;
+	}
+
+
 
 	// 부모파트의 멤버 변수 m_vPos를 변경한 vPos값으로 Set
 //	SetPos(vPos);
 
 	GetAnimator()->update();
 
-
+	// 상태 기록
 	m_ePrevState = m_eCurState;
 	m_ePrevJumpState = m_eCurJumpState;
+	m_ePrevGiantState = m_eCurGiantState;
 }
 
 void CPlayer::render(HDC _dc)
@@ -273,7 +316,14 @@ void CPlayer::update_state()
 	//// 복잡하게 상태를 변경 시키기			else if로 구현하면 상쇄를 구현할 수 없음
 	//if (KEY_HOLD(KEY::A))
 	//{
-	if (PLAYER_STATE::JUMP != m_eCurState)
+	if (m_iHP <= 0)
+	{
+		m_eCurState = PLAYER_STATE::DEAD;
+		return;
+	}
+
+
+	if (PLAYER_STATE::JUMP != m_eCurState && PLAYER_STATE::GIANT != m_eCurState)
 		m_eCurState = PLAYER_STATE::WALK;
 	/*}
 	if (KEY_HOLD(KEY::D))
@@ -290,13 +340,9 @@ void CPlayer::update_state()
 	}*/
 	if (KEY_TAP(KEY::SPACE))
 	{
-		m_eCurState = PLAYER_STATE::JUMP;
 		if (m_iJumpStack > 0)
-			if (GetRigidBody())
-			{
-				--m_iJumpStack;
-				GetRigidBody()->SetVelocity(Vec2(GetRigidBody()->GetVelocity().x, -500.f));
-			}
+			m_eCurState = PLAYER_STATE::JUMP;
+
 	}
 	// JUMP 상태인 경우 속도에 따라 분류하기
 	if (m_eCurState == PLAYER_STATE::JUMP)
@@ -322,13 +368,84 @@ void CPlayer::update_state()
 				m_eCurJumpState = PLAYER_JUMP_STATE::JUMP_DOWN;
 		}
 	}
+
+
+	// GIANT 상태 분류하기
+	if (m_eCurGiantState == PLAYER_GIANT_STATE::GIANT_ENTER)
+	{
+		Vec2 vPos = GetPos();
+		Vec2 vScale = GetScale();
+		Vec2 vCScale = GetCollider()->GetScale();
+			if (m_fGiantTime <= 1.f)
+			{
+				vPos -= Vec2(0.f, 133.f) * fDT;
+				if (vScale.x <= 801.f && vScale.y <= 399.f)
+				{
+					vScale += Vec2(534.f, 266.f) * fDT;
+					vCScale += Vec2(160.f, 260.f) * fDT;
+					SetPos(vPos);
+					SetScale(vScale);
+					GetCollider()->SetScale(vCScale);
+				}
+			}
+			else if (m_fGiantTime > 1.f && m_fGiantTime <4.f)
+			{
+			//	m_eCurGiantState = PLAYER_GIANT_STATE::GIANT_ENTER;
+				GetCollider()->SetScale(Vec2(240.f, 390.f));
+			}
+			else if (m_fGiantTime >= 4.f && m_fGiantTime < 5.f)
+			{
+				/*m_eCurGiantState = PLAYER_GIANT_STATE::GIANT_ESCAPE;*/
+				vPos += Vec2(0.f, 133.f) * fDT;
+				if (vScale.x >= 267.f && vScale.y >= 133.f )
+				{
+					vScale -= Vec2(534.f, 266.f) * fDT;
+					vCScale -= Vec2(160.f, 260.f) * fDT;
+					SetPos(vPos);
+					SetScale(vScale);
+					GetCollider()->SetScale(vCScale);
+				}
+			}
+			else if (m_fGiantTime >= 5.f)
+			{
+				m_eCurGiantState = PLAYER_GIANT_STATE::GIANT_NOT;
+				SetScale(Vec2(267.f, 133.f));
+				m_fGiantTime = 0;
+				GetCollider()->SetScale(Vec2(80.f,130.f));
+			}
+			m_fGiantTime += fDT;
+	}
 }
 
 void CPlayer::update_move()
 {
-
-
 	CRigidBody* pRigid = GetRigidBody();
+	// 점프 방향 체크 (올라가는 중인지 내려가는 중인지)
+	if (pRigid->GetVelocity().y >= 0)
+		m_bDir = false;
+	else if (pRigid->GetVelocity().y < 0)
+		m_bDir = true;
+
+	if (m_eCurState == PLAYER_STATE::DEAD)
+		return;
+
+	
+
+	// 슬로우 체크
+	if (m_bSlow)
+	{
+		pRigid->SetMaxVelocity(Vec2(150.f, 600.f));
+		m_fSlowTime -= fDT;
+		if (m_fSlowTime <= 0)
+		{
+			pRigid->SetMaxVelocity(Vec2(200.f, 600.f));
+			m_bSlow = false;
+			m_fSlowTime = 3.f;
+		}
+	}
+
+
+
 
 	//계속 움직이게
 	pRigid->AddForce(Vec2(300.f, 0.f));
@@ -342,14 +459,14 @@ void CPlayer::update_move()
 	//{
 	//	pRigid->AddForce(Vec2(0.f, 200.f));
 	//}
-	if (KEY_HOLD(KEY::A))
+	/*if (KEY_HOLD(KEY::A))
 	{
 		pRigid->AddForce(Vec2(-200.f, 0.f));
 	}
 	if (KEY_HOLD(KEY::D))
 	{
 		pRigid->AddForce(Vec2(200.f, 0.f));
-	}
+	}*/
 	//if (KEY_TAP(KEY::W))
 	//{
 	//	pRigid->AddVelocity(Vec2(0.f, -100.f));
@@ -358,20 +475,37 @@ void CPlayer::update_move()
 	{
 		pRigid->AddVelocity(Vec2(0.f, 100.f));
 	}*/
-	if (KEY_TAP(KEY::A))
+	/*if (KEY_TAP(KEY::A))
 	{
 		pRigid->SetVelocity(Vec2(-100.f, pRigid->GetVelocity().y));
 	}
 	if (KEY_TAP(KEY::D))
 	{
 		pRigid->SetVelocity(Vec2(100.f, pRigid->GetVelocity().y));
+	}*/
+	if (KEY_TAP(KEY::SPACE))
+	{	
+		if (m_iJumpStack > 0)
+			if (GetRigidBody())
+			{
+				// 06/16 사운드 추가
+				CResMgr::GetInst()->LoadSound(L"Jump_01", L"sound\\Jump.wav");
+				CSound* pNewSound = CResMgr::GetInst()->FindSound(L"Jump_01");
+
+				pNewSound->Play();
+
+				pNewSound->SetPosition(0.f);			// 백분율, 재생 위치 설정 ex 50% 구간
+				pNewSound->SetVolume(30.f);				// 0~100 까지 볼륨 설정
+				--m_iJumpStack;
+				GetRigidBody()->SetVelocity(Vec2(GetRigidBody()->GetVelocity().x, -500.f));
+			}
 	}
 }
 
 void CPlayer::update_animation()
 {
 	// 상태가 변경되지 않았다면 리턴
-	if (m_ePrevState == m_eCurState && m_eCurJumpState == m_ePrevJumpState)
+	if (m_eCurState != PLAYER_STATE::DEAD && m_ePrevState == m_eCurState && m_eCurJumpState == m_ePrevJumpState)
 	{
 		return;
 	}
@@ -397,13 +531,17 @@ void CPlayer::update_animation()
 
 		break;
 	case PLAYER_STATE::DEAD:
-		 
+		if (m_fDeatTime <= 0.4f)
+			GetAnimator()->Play(L"Dead", false);
+		else
+			GetAnimator()->Play(L"Dead_s", true);
+		m_fDeatTime += fDT;
 		break;
 	case PLAYER_STATE::JUMP:
 	{
 		// 일반 점프인 경우
 		if (m_iJumpStack == 1)
-		{
+		{ 
 			switch (m_eCurJumpState)
 			{
 			case PLAYER_JUMP_STATE::JUMP_UP:
@@ -458,23 +596,47 @@ void CPlayer::OnCollisionEnter(CCollider* _pOther)
 	{
 		Vec2 vPos = GetPos();
 		Vec2 vOtherPos = pOtherObj->GetPos();
-		if (vPos.y < vOtherPos.y)
+
+		if (GetRigidBody()->GetVelocity().y == 0)
 		{
 			m_iJumpStack = 2;
+ 			m_eCurState = PLAYER_STATE::WALK;
 		}
-		m_eCurState = PLAYER_STATE::WALK;
 	}
 	if (L"Coin" == pOtherObj->GetName())
 	{
+		// 06/15 코인 개수 세기
 		CCore::GetInst()->m_iCoin += 1;
-		DeleteObject(_pOther->GetObj());
+	}
+	// 06 / 16 수정 
+	if (L"Big_Potion" == pOtherObj->GetName())
+	{
+		m_fGiantTime = 0;
+		m_eCurGiantState = PLAYER_GIANT_STATE::GIANT_ENTER;
+	}
+	if (L"Banana" == pOtherObj->GetName())
+	{
+		m_bSlow = true;
+	}
+	if (L"Monster" == pOtherObj->GetName() && m_eCurState != PLAYER_STATE::DEAD)
+	{
+		// 06/16 사운드 추가
+		CResMgr::GetInst()->LoadSound(L"Attack_01", L"sound\\Mon_attack.wav");
+		CSound* pNewSound = CResMgr::GetInst()->FindSound(L"Attack_01");
+		pNewSound->Play();
 	}
 }
 
-
-
-//void CPlayer::render()
-//{
-//	
-//}
+void CPlayer::OnCollision(CCollider* _pOther)
+{
+	CObject* pOtherObj = _pOther->GetObj();
+	if (L"Ground" == pOtherObj->GetName())
+	{
+		if (GetRigidBody()->GetVelocity().y == 0)
+		{
+			m_iJumpStack = 2;
+		//	m_eCurState = PLAYER_STATE::WALK;
+		}
+	}
+}
 

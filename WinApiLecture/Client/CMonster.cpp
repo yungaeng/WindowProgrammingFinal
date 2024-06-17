@@ -7,8 +7,10 @@
 #include "AI.h"
 #include "CTexture.h"
 #include "CResMgr.h"
+#include "CSound.h"
 #include "CAnimator.h"
 #include "CRigidBody.h"
+#include "CPlayer.h"
 CMonster::CMonster()
 	:m_vCenterPos(Vec2(0.f,0.f))
 	,m_tInfo{}
@@ -26,12 +28,12 @@ CMonster::CMonster()
 
 
 	CreateAnimator();
-	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"MonsterTex", L"texture\\pepper.bmp");
+	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"MonsterTex", L"texture\\pepper3.bmp");
 
-	//CreateRigidBody();
+	// CreateRigidBody();
 
 
-	//	CreateGravity();
+	// CreateGravity();
 
 	GetAnimator()->CreateAnimation(
 		L"Monster",
@@ -64,7 +66,7 @@ void CMonster::update()
 	if (m_bGoneDead == false)
 	{
 		// 진행 방향으로 시간 당 m_fSpeed만큼 이동
-		vCurPos.x += fDT * m_fSpeed * m_iDir;
+		vCurPos.x += fDT * m_tInfo.fSpeed * m_iDir;
 
 		float fDist = abs(m_vCenterPos.x - vCurPos.x) - m_fMaxDistance;
 		// 두 위치의 차이(m_vCenterPos.x - vCurPos.x)는 절대값으로 구해야 함
@@ -97,6 +99,11 @@ void CMonster::update()
 
 		if (m_fDeadTime >= 1.f)
 		{
+			// 06/16 사운드 추가
+			CResMgr::GetInst()->LoadSound(L"Mon_Dead01", L"sound\\Mon_Dead.wav");
+			CSound* pNewSound = CResMgr::GetInst()->FindSound(L"Mon_Dead01");
+			pNewSound->SetVolume(60.f);
+			pNewSound->Play();
 			DeleteObject(this);
 		}
 	}
@@ -137,7 +144,9 @@ void CMonster::OnCollisionEnter(CCollider* _pOther)
 	// 부딪힌 상대 생각하기
 	if (pOtherObj->GetName() == L"Player" && m_bGoneDead == false)
 	{
-		// 추가 바람 : 06.15 추가 - 플레이어와의 충돌 상호작용 구현
+		
+
+		// 06.15 추가 - 플레이어와의 충돌 상호작용 구현
 		// 플레이어 위치
 		Vec2 vPlayerPos = pOtherObj->GetPos();
 
@@ -145,7 +154,7 @@ void CMonster::OnCollisionEnter(CCollider* _pOther)
 		Vec2 vMyPos = GetPos();
 
 		// 밟힐 수 있는 y위치 차이 최소 거리 > 좀 더 세세한 상호작용은 조정이 필요
-		float fCanPress = pOtherObj->GetScale().y / 2 + this->GetScale().y;
+		float fCanPress = 110.f;//pOtherObj->GetScale().y / 2 + this->GetCollider()->GetScale().y/2 - 20;
 
 		// 충돌 시 플레이어와 몬스터(자신)의 y위치 차이가 밟힐 수 있는 거리보다 크면
 		if (abs(vPlayerPos.y - vMyPos.y) >= fCanPress)
@@ -155,7 +164,10 @@ void CMonster::OnCollisionEnter(CCollider* _pOther)
 			// 죽는 애니메이션 플레이 모드 활성화
 			m_bGoneDead = true;
 			CreateGravity();
+			return;
 		}
+		((CPlayer*)pOtherObj)->Damage();
+		
 	}
 }
 

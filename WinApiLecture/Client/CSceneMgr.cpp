@@ -3,7 +3,7 @@
 #include "CScene_Start.h"
 #include "CScene_Tool.h"
 #include "CScene_End.h"
-#include "CScene_5_5.h"
+#include "CScene_Intro.h"
 #include "CEventMgr.h"
 
 
@@ -32,6 +32,10 @@ void CSceneMgr::init()
 	m_arrScene[(UINT)SCENE_TYPE::START] = new CScene_Start;
 	m_arrScene[(UINT)SCENE_TYPE::START]->SetName(L"Start Scene");
 
+	// Scene 생성
+	m_arrScene[(UINT)SCENE_TYPE::INTRO] = new CScene_Intro;
+	m_arrScene[(UINT)SCENE_TYPE::INTRO]->SetName(L"Intro Scene");
+
 
 
 	m_arrScene[(UINT)SCENE_TYPE::TOOL] = new CScene_Tool;
@@ -49,9 +53,9 @@ void CSceneMgr::init()
 
 
 	// 현재 씬 지정
-	m_pCurScene = m_arrScene[(UINT)SCENE_TYPE::START];
+	m_pCurScene = m_arrScene[(UINT)SCENE_TYPE::INTRO];
 	m_pCurScene->Enter();
-}
+} 
 
 // 현재 씬을 업데이트
 void CSceneMgr::update()

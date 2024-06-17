@@ -30,6 +30,7 @@ CCore::CCore()
 	,m_arrPen{}
 	,m_hMenu(0)
 	,m_iCoin(0)
+	,m_iHP(5)
 {
 	
 }
@@ -86,18 +87,19 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 	CKeyMgr::GetInst()->init();
 	CSceneMgr::GetInst()->init();
 	CPathMgr::GetInst()->init();
+
+
 	CSoundMgr::GetInst()->init();
+	//// 각 신 업데이트에 넣으면 될듯
+	//// Sound 로드 테스트★★★★★★
+	//CResMgr::GetInst()->LoadSound(L"BGM_01", L"sound\\BGM.wav");
+	//CSound* pNewSound = CResMgr::GetInst()->FindSound(L"BGM_01");
 
-	// 각 신 업데이트에 넣으면 될듯
-	// Sound 로드 테스트★★★★★★
-	CResMgr::GetInst()->LoadSound(L"BGM_01", L"sound\\DM.wav");
-	CSound* pNewSound = CResMgr::GetInst()->FindSound(L"BGM_01");
+	////pNewSound->Play();
 
-	//pNewSound->Play();
-
-	pNewSound->SetPosition(50.f);			// 백분율, 소리 위치 설정 ex 30% 구간
-	pNewSound->PlayToBGM(true);				// BGM으로 Play 
-	//pNewSound->SetVolume(60.f);			// 0~100 까지 볼륨 설정
+	//pNewSound->SetPosition(0.f);			// 백분율, 재생 위치 설정 ex 50% 구간
+	//pNewSound->PlayToBGM(true);				// BGM으로 Play 
+	////pNewSound->SetVolume(60.f);			// 0~100 까지 볼륨 설정
 
 
 	// 현재 Sound당 버퍼는 한 개이기 때문에 한 사운드가 재생중일 때 그 사운드를 다시 재생시키면

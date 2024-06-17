@@ -26,6 +26,7 @@ private:
     float   m_fMaxDistance;     // 최대 이동거리
     int     m_iDir;             // 1이면 오른쪽, -1이면 왼쪽
     //int     m_iHP;
+public:
     bool m_bGoneDead;         // 죽는 상태 활성 유무
     float m_fDeadTime;
  

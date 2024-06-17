@@ -49,19 +49,19 @@ void CTimeMgr::update()
 void CTimeMgr::render()
 {
 
-	// 호출 횟수 증가
-	++m_iCallCount;
+	//// 호출 횟수 증가
+	//++m_iCallCount;
 
-	m_dAcc += m_dDT;	// DT 누적
+	//m_dAcc += m_dDT;	// DT 누적
 
-	if (m_dAcc >= 1.) // 1초에 한번(m_dAcc에 누적 된 값이 1초가 넘어가면)
-	{
-		m_dAcc = 0.;
-		m_iFPS = m_iCallCount;
-		m_iCallCount = 0;
+	//if (m_dAcc >= 1.) // 1초에 한번(m_dAcc에 누적 된 값이 1초가 넘어가면)
+	//{
+	//	m_dAcc = 0.;
+	//	m_iFPS = m_iCallCount;
+	//	m_iCallCount = 0;
 
-		wchar_t szBuffer[255] = {};
-		swprintf_s(szBuffer, L"FPS : %d, DT : %f", m_iFPS, m_dDT);
-		SetWindowText(CCore::GetInst()->GetMainHwnd(), szBuffer);
-	}
+	//	wchar_t szBuffer[255] = {};
+	//	swprintf_s(szBuffer, L"FPS : %d, DT : %f", m_iFPS, m_dDT);
+	//	SetWindowText(CCore::GetInst()->GetMainHwnd(), szBuffer);
+	//}
 }

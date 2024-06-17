@@ -32,7 +32,8 @@ void CCamera::update()
 			m_pTargerObj = nullptr;
 		else
 		{
-			m_vLookAt = m_pTargerObj->GetPos();
+			// 가로만 따라다니게 변경
+			m_vLookAt.x = m_pTargerObj->GetPos().x;
 		}
 	}
 

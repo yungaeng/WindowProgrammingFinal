@@ -241,7 +241,7 @@ void CAnimation::render(HDC _dc)
 	// 카메라 렌더링 좌표로 변환
 	vPos = CCamera::GetInst()->GetRenderPos(vPos);
 	
-	TransparentBlt(_dc
+	/*TransparentBlt(_dc
 		,(int)(vPos.x - m_vecFrm[m_iCurFrm].vSlice.x / 2.f)
 		,(int)(vPos.y - m_vecFrm[m_iCurFrm].vSlice.y / 2.f)
 		,(int)(m_vecFrm[m_iCurFrm].vSlice.x)
@@ -251,7 +251,23 @@ void CAnimation::render(HDC _dc)
 		,(int)(m_vecFrm[m_iCurFrm].vLT.y)
 		,(int)(m_vecFrm[m_iCurFrm].vSlice.x)
 		,(int)(m_vecFrm[m_iCurFrm].vSlice.y)
-		,RGB(255,0,255));
+		,RGB(255,0,255));*/
+
+
+	TransparentBlt(_dc
+		, (int)(vPos.x - pObj->GetScale().x/2)
+		, (int)(vPos.y - pObj->GetScale().y/2)
+		, (int)(pObj->GetScale().x)
+		, (int)(pObj->GetScale().y)
+		, m_pTex->GetDC()
+		, (int)(m_vecFrm[m_iCurFrm].vLT.x)
+		, (int)(m_vecFrm[m_iCurFrm].vLT.y)
+		, (int)(m_vecFrm[m_iCurFrm].vSlice.x)
+		, (int)(m_vecFrm[m_iCurFrm].vSlice.y)
+		, RGB(255, 0, 255));
+	
+
+
 }
 void CAnimation::Create(CTexture* _pTex, Vec2 _vLT, Vec2 _vSliceSize, Vec2 _vStep, float fDuration, UINT _iFrameCount)
 {

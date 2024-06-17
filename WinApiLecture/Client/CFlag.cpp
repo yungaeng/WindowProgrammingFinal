@@ -5,6 +5,7 @@
 #include "CMissile.h"
 #include "CSceneMgr.h"
 #include "CScene.h"
+#include "CSound.h"
 
 #include "CPathMgr.h"
 #include "CResMgr.h"
@@ -58,7 +59,12 @@ void CFlag::OnCollisionEnter(CCollider* _pOther)
 {
 	CObject* pOtherObj = _pOther->GetObj();	// ºÎµúÈù »ó´ëÀÇ object¸¦ ¹Þ¾Æ¿È
 	if (pOtherObj->GetName() == L"Player")
+	{
+		CResMgr::GetInst()->LoadSound(L"End", L"sound\\end.wav");
+		CSound* pNewSound = CResMgr::GetInst()->FindSound(L"End");
+		pNewSound->Play();
 		ChangeScene(SCENE_TYPE::EnD);
+	}
 }
 
 void CFlag::OnCollision(CCollider* _pOther)

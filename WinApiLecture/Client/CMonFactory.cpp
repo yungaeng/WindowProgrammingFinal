@@ -19,14 +19,14 @@ CMonster* CMonFactory::CreateMonster(MON_TYPE _eType, Vec2 _vPos)
 		pMon->SetPos(_vPos);
 		pMon->m_vCenterPos = _vPos;
 		pMon->SetName(L"Monster");
-		pMon->SetScale(Vec2(40.f, 40.f));
+		pMon->SetScale(Vec2(200.f, 200.f));
 
 		tMonInfo info = {};
 		info.fAtt = 10.f;
 		info.fAttRange = 50.f;
 		info.fRecgRange = 300.f;
 		info.fHP = 100.f;
-		info.fSpeed = 150.f;
+		info.fSpeed = (float)MakeRandomInt(75, 125);
 
 		pMon->SetMonInfo(info);
 

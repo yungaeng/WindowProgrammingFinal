@@ -1,27 +1,21 @@
-<<<<<<< Updated upstream
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\yun\Desktop\WindowProgrammingFinal\WinApiLecture\Client\Unity\unity_N7N3YALLY7XB0NPG.cpp' 경로의 일부를 찾을 수 없습니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\yun\Desktop\WindowProgrammingFinal\WinApiLecture\Client\Unity\unity_3T4RHC013AQT0G32.cpp' 경로의 일부를 찾을 수 없습니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\yun\Desktop\WindowProgrammingFinal\WinApiLecture\Client\Unity\unity_AE5RKKQE2ET1VMV5.cpp' 경로의 일부를 찾을 수 없습니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Unity.targets(192,5): warning : 'C:\Users\yun\Desktop\WindowProgrammingFinal\WinApiLecture\Client\Unity\unity_FBFWLIMY5U1XOS24.cpp' 경로의 일부를 찾을 수 없습니다.
-  unity_DV5IUEJCL0QGM6W8.cpp
-  unity_CK31T983XAJEFOTV.cpp
-  unity_H3FSYLG1HF21YO3Y.cpp
-  unity_MRX81VH3YVK2MYDK.cpp
+﻿  unity_RGQS715ZSGOZJ38B.cpp
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-=======
-﻿  unity_CK31T983XAJEFOTV.cpp
->>>>>>> Stashed changes
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(49,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(49,11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(47,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(47,11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(46,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CGround.cpp(45,10): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(123,19): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(123,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(121,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(121,15): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(120,13): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Client\CMonster.cpp(119,11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Client.vcxproj -> C:\Users\yunseong\Desktop\WindowProgrammingFinal\WinApiLecture\Output\bin_debug\Client.exe
+C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\CUI.cpp(79,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Unity/unity_RGQS715ZSGOZJ38B.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\CUI.cpp(79,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Unity/unity_RGQS715ZSGOZJ38B.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\CUI.cpp(77,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Unity/unity_RGQS715ZSGOZJ38B.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\CUI.cpp(77,14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Unity/unity_RGQS715ZSGOZJ38B.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\CUI.cpp(76,12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Unity/unity_RGQS715ZSGOZJ38B.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Client\CUI.cpp(75,10): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Unity/unity_RGQS715ZSGOZJ38B.cpp'을(를) 컴파일하는 중)
+  
+  Client.vcxproj -> C:\Users\Programmer\WindowProgrammingFinal-main\WinApiLecture\Output\bin_debug\Client.exe

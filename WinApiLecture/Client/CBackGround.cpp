@@ -11,7 +11,7 @@
 CBackGround::CBackGround()
 {
 	CreateAnimator();
-	m_pTex = CResMgr::GetInst()->LoadTexture(L"MapTex", L"texture\\mapbg.bmp");
+	m_pTex = CResMgr::GetInst()->LoadTexture(L"MapTex", L"texture\\mapbg2.bmp");
 }
 
 CBackGround::~CBackGround()
@@ -38,13 +38,21 @@ void CBackGround::render(HDC _dc)
 	float width = (float)m_pTex->Width();
 	float height = (float)m_pTex->Height();
 
-	TransparentBlt(_dc,
+	/*TransparentBlt(_dc,
 		vPos.x - (float)(vResolution.x / 2)
 		, vPos.y - (float)(vResolution.y / 2)
 		, vResolution.x, vResolution.y
 		, m_pTex->GetDC()
 		,0,0, width, height
-		,NULL);
+		,NULL);*/
+
+	BitBlt(_dc
+		, vPos.x - (float)(vResolution.x / 2)
+		, vPos.y - (float)(vResolution.y / 2)
+		, width, height,
+		m_pTex->GetDC(), 0, 0, SRCCOPY);
+
+
 	
 }
 

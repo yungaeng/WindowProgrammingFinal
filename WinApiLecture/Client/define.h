@@ -53,6 +53,7 @@ enum class GROUP_TYPE
 enum class SCENE_TYPE
 {
 	TOOL,
+	INTRO,
 	START,
 	//end scene Ãß°¡
 	EnD,

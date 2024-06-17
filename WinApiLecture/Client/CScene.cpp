@@ -106,12 +106,16 @@ void CScene::render(HDC _dc)
 
 void CScene::render_tile(HDC _dc)
 {
+
 	const vector<CObject*>& vecTile = GetGroupObject(GROUP_TYPE::TILE);
+
 	// 카메라가 실제로 보고있는 좌표를 알아오기
 	Vec2 vCamLook =  CCamera::GetInst()->GetLookAt();
 
+
 	// 현재 화면 해상도 알아오기
 	Vec2 vRestoultion = CCore::GetInst()->GetResolution();
+
 
 	// 카메라가 보고있는 곳의 좌상단 좌표
 	Vec2 vLeftTop = vCamLook - vRestoultion / 2;

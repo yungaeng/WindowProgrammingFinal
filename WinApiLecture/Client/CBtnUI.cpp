@@ -1,6 +1,11 @@
 #include "CBtnUI.h"
 
+
+#include "CCore.h"
 #include "CScene.h"
+#include "CTexture.h"
+#include "CResMgr.h"
+
 
 
 CBtnUI::CBtnUI()
@@ -10,6 +15,7 @@ CBtnUI::CBtnUI()
 	,m_pFunc(nullptr)
 	,m_pSceneInst(nullptr)
 	,m_pSceneFunc(nullptr)
+	//,m_pTex(nullptr)
 {
 
 }
@@ -19,6 +25,14 @@ CBtnUI::~CBtnUI()
 }
 
 
+//void CBtnUI::render(HDC _dc)
+//{
+//	Vec2 vPos = GetPos();
+//	Vec2 vScale = GetScale();
+//	Vec2 vResoultion = CCore::GetInst()->GetResolution();
+//
+//	vPos = CCamera::GetInst()->GetRenderPos(vPos);
+//}
 
 void CBtnUI::MouseOn()
 {

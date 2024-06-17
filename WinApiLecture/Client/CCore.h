@@ -108,6 +108,7 @@ private:
 
 public:
 	int m_iCoin;		// 프로그램 중 코인의 개수
+	int m_iHP;
 
 
 
