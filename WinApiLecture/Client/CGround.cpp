@@ -12,7 +12,7 @@
 CGround::CGround()
 {
 	CreateCollider();
-	m_pTex = CResMgr::GetInst()->LoadTexture(L"GroundTex", L"texture\\Ground3.bmp");
+	//m_pTex = CResMgr::GetInst()->LoadTexture(L"GroundTex", L"texture\\Ground3.bmp");
 
 
 }

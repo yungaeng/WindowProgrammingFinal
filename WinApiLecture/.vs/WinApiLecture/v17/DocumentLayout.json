@@ -3,6 +3,17 @@
   "WorkspaceRootPath": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
+=======
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CGround.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CGround.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CTexture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CMonster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CMonster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -113,10 +124,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CRigidBody.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CRigidBody.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|solutionrelative:Client\\CTexture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F4EF720-81E8-4814-875C-C3932C08E3E7}|Client\\Client.vcxproj|C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTimeMgr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -243,7 +250,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -251,6 +258,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 3,
               "Title": "CScene_Start.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene_Start.cpp",
@@ -264,6 +272,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 8,
+>>>>>>> Stashed changes
               "Title": "CCore.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CCore.h",
               "RelativeDocumentMoniker": "Client\\CCore.h",
@@ -275,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CMonster.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CMonster.h",
               "RelativeDocumentMoniker": "Client\\CMonster.h",
@@ -287,20 +298,24 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 2,
+>>>>>>> Stashed changes
               "Title": "CMonster.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CMonster.cpp",
               "RelativeDocumentMoniker": "Client\\CMonster.cpp",
               "ToolTip": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CMonster.cpp",
               "RelativeToolTip": "Client\\CMonster.cpp",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAAJoAAAAZAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAJoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-13T11:23:53.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CScene_End.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene_End.cpp",
               "RelativeDocumentMoniker": "Client\\CScene_End.cpp",
@@ -312,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CSceneMgr.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CSceneMgr.cpp",
               "RelativeDocumentMoniker": "Client\\CSceneMgr.cpp",
@@ -324,7 +339,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "CTexture.h",
+              "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.h",
+              "RelativeDocumentMoniker": "Client\\CTexture.h",
+              "ToolTip": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.h",
+              "RelativeToolTip": "Client\\CTexture.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T06:35:31.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CScene_Start.cpp",
+              "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene_Start.cpp",
+              "RelativeDocumentMoniker": "Client\\CScene_Start.cpp",
+              "ToolTip": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene_Start.cpp",
+              "RelativeToolTip": "Client\\CScene_Start.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAALcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T04:33:53.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CCore.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CCore.cpp",
               "RelativeDocumentMoniker": "Client\\CCore.cpp",
@@ -336,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CBlock.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CBlock.cpp",
               "RelativeDocumentMoniker": "Client\\CBlock.cpp",
@@ -348,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CEventMgr.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CEventMgr.cpp",
               "RelativeDocumentMoniker": "Client\\CEventMgr.cpp",
@@ -360,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CScene.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene.cpp",
               "RelativeDocumentMoniker": "Client\\CScene.cpp",
@@ -372,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "CEventMgr.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CEventMgr.h",
               "RelativeDocumentMoniker": "Client\\CEventMgr.h",
@@ -384,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "CScene.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene.h",
               "RelativeDocumentMoniker": "Client\\CScene.h",
@@ -396,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "CBackGround.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CBackGround.h",
               "RelativeDocumentMoniker": "Client\\CBackGround.h",
@@ -408,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "CBackGround.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CBackGround.cpp",
               "RelativeDocumentMoniker": "Client\\CBackGround.cpp",
@@ -420,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "func.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\func.cpp",
               "RelativeDocumentMoniker": "Client\\func.cpp",
@@ -432,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\main.cpp",
               "RelativeDocumentMoniker": "Client\\main.cpp",
@@ -444,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CObject.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CObject.h",
               "RelativeDocumentMoniker": "Client\\CObject.h",
@@ -456,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "CCollider.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CCollider.h",
               "RelativeDocumentMoniker": "Client\\CCollider.h",
@@ -468,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "CScene_Start.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CScene_Start.h",
               "RelativeDocumentMoniker": "Client\\CScene_Start.h",
@@ -480,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "CTexture.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.cpp",
               "RelativeDocumentMoniker": "Client\\CTexture.cpp",
@@ -516,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "CRigidBody.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CRigidBody.h",
               "RelativeDocumentMoniker": "Client\\CRigidBody.h",
@@ -525,18 +565,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-26T10:34:13.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CTexture.h",
-              "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.h",
-              "RelativeDocumentMoniker": "Client\\CTexture.h",
-              "ToolTip": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CTexture.h",
-              "RelativeToolTip": "Client\\CTexture.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-05T06:35:31.307Z"
             },
             {
               "$type": "Document",
@@ -882,7 +910,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CPlayer.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CPlayer.cpp",
               "RelativeDocumentMoniker": "Client\\CPlayer.cpp",
@@ -894,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CMonFactory.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CMonFactory.cpp",
               "RelativeDocumentMoniker": "Client\\CMonFactory.cpp",
@@ -906,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CGround.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CGround.h",
               "RelativeDocumentMoniker": "Client\\CGround.h",
@@ -922,16 +950,16 @@
               "Title": "CGround.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CGround.cpp",
               "RelativeDocumentMoniker": "Client\\CGround.cpp",
-              "ToolTip": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CGround.cpp",
-              "RelativeToolTip": "Client\\CGround.cpp",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAnwD0AAAAAAAAA",
+              "ToolTip": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CGround.cpp*",
+              "RelativeToolTip": "Client\\CGround.cpp*",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAACgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-15T05:32:27.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CAnimation.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CAnimation.cpp",
               "RelativeDocumentMoniker": "Client\\CAnimation.cpp",
@@ -943,7 +971,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CPlayer.h",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CPlayer.h",
               "RelativeDocumentMoniker": "Client\\CPlayer.h",
@@ -955,7 +983,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "CIdleState.cpp",
               "DocumentMoniker": "C:\\Users\\yunseong\\Desktop\\WindowProgrammingFinal\\WinApiLecture\\Client\\CIdleState.cpp",
               "RelativeDocumentMoniker": "Client\\CIdleState.cpp",
